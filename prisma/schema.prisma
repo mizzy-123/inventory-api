@@ -1,0 +1,91 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String   @id @unique @default(uuid())
+  email      String   @unique
+  username   String   @unique
+  password   String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  roles Role?
+
+  @@map("users")
+}
+
+model Role {
+  id      BigInt  @id @default(autoincrement())
+  admin   Boolean @default(false)
+  manager Boolean @default(false)
+  staff   Boolean @default(false)
+
+  users    User   @relation(fields: [users_id], references: [id])
+  users_id String @unique
+
+  @@map("roles")
+}
+
+model Supplier {
+  id           BigInt   @id @default(autoincrement())
+  name         String   @db.VarChar(100)
+  contact_info String   @db.VarChar(255)
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+
+  item Item[]
+
+  @@map("supplier")
+}
+
+model Item {
+  id         BigInt   @id @default(autoincrement())
+  name       String   @db.VarChar(100)
+  quantity   Int
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  supplier     Supplier  @relation(fields: [supplier_id], references: [id])
+  supplier_id  BigInt
+  Inventory    Inventory @relation(fields: [inventory_id], references: [id])
+  inventory_id BigInt
+
+  @@map("item")
+}
+
+model Inventory {
+  id         BigInt   @id @default(autoincrement())
+  quantity   Int
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  warehouse    Warehouse @relation(fields: [warehouse_id], references: [id])
+  warehouse_id BigInt
+  item         Item[]
+
+  @@map("inventory")
+}
+
+model Warehouse {
+  id         BigInt   @id @default(autoincrement())
+  name       String   @db.VarChar(100)
+  location   String   @db.VarChar(255)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  inventory Inventory[]
+
+  @@map("warehouse")
+}
