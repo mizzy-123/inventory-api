@@ -1,2 +1,92 @@
  [LOGGER] 2024-07-17 02:26:05.631 PM error : Listening on http://localhost:3000
  [LOGGER] 2024-07-17 02:27:18.756 PM info : Listening on http://localhost:3000
+ [LOGGER] 2024-07-17 10:07:37.026 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 10:11:37.984 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 10:13:36.852 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 10:14:00.296 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 10:20:50.113 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 10:22:24.766 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 10:23:57.796 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 10:26:13.071 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 10:28:40.234 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 10:32:05.197 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 10:32:15.205 PM error : [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "username"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "password"
+    ],
+    "message": "Required"
+  }
+]
+ [LOGGER] 2024-07-17 10:47:43.033 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 11:00:05.565 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 11:01:13.570 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 11:28:20.937 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/error-middleware.ts[0m:[93m8[0m:[93m40[0m - [91merror[0m[90m TS7006: [0mParameter 'err' implicitly has an 'any' type.
+
+[7m8[0m         const errorMessges = data.map((err) => ({
+[7m [0m [91m                                       ~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/error-middleware.ts[0m:[93m8[0m:[93m40[0m - [91merror[0m[90m TS7006: [0mParameter 'err' implicitly has an 'any' type.
+
+[7m8[0m         const errorMessges = data.map((err) => ({
+[7m [0m [91m                                       ~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-17 11:30:08.928 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 11:32:09.578 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 11:33:30.769 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 11:34:39.006 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 11:35:25.693 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 11:37:29.907 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-17 11:37:30.350 PM info : [object Object]
+ [LOGGER] 2024-07-17 11:38:03.137 PM info : [object Object]
+ [LOGGER] 2024-07-17 11:38:03.283 PM info : [object Object]
+ [LOGGER] 2024-07-17 11:39:38.482 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 11:40:26.781 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-17 11:40:26.949 PM info : [object Object]
+ [LOGGER] 2024-07-17 11:40:57.555 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 11:41:00.014 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-17 11:41:00.139 PM info : [object Object]
+ [LOGGER] 2024-07-17 11:42:01.862 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-17 11:42:07.437 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-17 11:42:07.588 PM info : [object Object]
+ [LOGGER] 2024-07-17 11:45:30.931 PM info : [object Object]
+ [LOGGER] 2024-07-17 11:45:30.933 PM info : [object Object]
+ [LOGGER] 2024-07-17 11:45:39.336 PM info : [object Object]
+ [LOGGER] 2024-07-17 11:46:29.027 PM info : [object Object]
+ [LOGGER] 2024-07-17 11:46:29.029 PM info : [object Object]
+ [LOGGER] 2024-07-17 11:46:29.763 PM info : [object Object]
+ [LOGGER] 2024-07-17 11:50:05.600 PM info : [object Object]
+ [LOGGER] 2024-07-17 11:50:05.602 PM info : [object Object]
