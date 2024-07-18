@@ -1,14 +1,14 @@
 import "dotenv/config";
 import jsonWebToken from "jsonwebtoken";
-import { User } from "@prisma/client";
+import { UserResponse } from "../model/user-model";
 
-export const generateAccessToken = (user: User): string => {
+export const generateAccessToken = (user: UserResponse): string => {
     return jsonWebToken.sign(user, String(process.env.JWT_SECRET), {
         expiresIn: process.env.JWT_EXPIRES_IN != null ? String(process.env.JWT_EXPIRES_IN) : "1800s",
     });
 };
 
-export const generateRefreshToken = (user: User): string => {
+export const generateRefreshToken = (user: UserResponse): string => {
     return jsonWebToken.sign(user, String(process.env.JWT_REFRESH_SECRET), {
         expiresIn: process.env.JWT_REFRESH_EXPIRES_IN != null ? String(process.env.JWT_REFRESH_EXPIRES_IN) : "1800s",
     });

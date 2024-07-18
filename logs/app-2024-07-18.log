@@ -1,0 +1,133 @@
+ [LOGGER] 2024-07-18 08:59:45.985 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:02:27.454 AM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-18 09:02:28.275 AM info : [object Object]
+ [LOGGER] 2024-07-18 09:04:08.561 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:07:07.558 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:08:49.226 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:09:44.992 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:11:31.496 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:18:29.919 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:18:53.403 AM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-18 09:18:53.487 AM info : [object Object]
+ [LOGGER] 2024-07-18 09:19:29.772 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:45:12.418 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:45:27.812 AM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-18 10:45:27.958 AM info : [object Object]
+ [LOGGER] 2024-07-18 10:45:27.964 AM info : [object Object]
+ [LOGGER] 2024-07-18 10:51:40.998 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:25:03.581 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:29:54.950 PM error : uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:406:5)
+    at ServerResponse.setHeader (node:_http_outgoing:652:11)
+    at ServerResponse.header (C:\laragon\www\inventory-api\node_modules\express\lib\response.js:795:10)
+    at ServerResponse.send (C:\laragon\www\inventory-api\node_modules\express\lib\response.js:175:12)
+    at ServerResponse.json (C:\laragon\www\inventory-api\node_modules\express\lib\response.js:279:15)
+    at C:\laragon\www\inventory-api\src\middleware\error-middleware.ts:20:32
+    at Generator.next (<anonymous>)
+    at C:\laragon\www\inventory-api\src\middleware\error-middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\laragon\www\inventory-api\src\middleware\error-middleware.ts:4:12)
+ [LOGGER] 2024-07-18 09:30:53.600 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:33:49.316 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-18 09:33:51.109 PM info : [object Object]
+ [LOGGER] 2024-07-18 09:33:51.150 PM info : [object Object]
+ [LOGGER] 2024-07-18 09:43:52.302 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:44:33.838 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:45:56.077 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:47:38.769 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:48:55.294 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:53:48.427 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:54:28.330 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 09:58:03.026 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:00:01.471 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:01:49.371 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-18 10:01:49.642 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:01:49.835 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:01:50.023 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:01:50.027 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:01:50.029 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:02:08.246 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:02:08.249 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:02:08.253 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:03:26.313 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:04:09.290 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-18 10:04:09.358 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:04:20.203 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:04:33.868 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:04:33.872 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:04:33.875 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:04:47.249 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:04:47.274 PM error : uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:406:5)
+    at ServerResponse.setHeader (node:_http_outgoing:652:11)
+    at ServerResponse.header (C:\laragon\www\inventory-api\node_modules\express\lib\response.js:795:10)
+    at ServerResponse.send (C:\laragon\www\inventory-api\node_modules\express\lib\response.js:175:12)
+    at ServerResponse.json (C:\laragon\www\inventory-api\node_modules\express\lib\response.js:279:15)
+    at C:\laragon\www\inventory-api\src\middleware\admin-middleware.ts:26:28
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\laragon\www\inventory-api\src\middleware\admin-middleware.ts:5:58)
+ [LOGGER] 2024-07-18 10:06:19.138 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:06:25.456 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-18 10:06:25.618 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:06:25.702 PM error : uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:406:5)
+    at ServerResponse.setHeader (node:_http_outgoing:652:11)
+    at ServerResponse.header (C:\laragon\www\inventory-api\node_modules\express\lib\response.js:795:10)
+    at ServerResponse.send (C:\laragon\www\inventory-api\node_modules\express\lib\response.js:175:12)
+    at ServerResponse.json (C:\laragon\www\inventory-api\node_modules\express\lib\response.js:279:15)
+    at C:\laragon\www\inventory-api\src\middleware\admin-middleware.ts:26:28
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\laragon\www\inventory-api\src\middleware\admin-middleware.ts:5:58)
+ [LOGGER] 2024-07-18 10:08:11.671 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:08:54.601 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:09:34.553 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:12:59.002 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:13:08.114 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-18 10:13:08.288 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:13:14.515 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:13:27.740 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:13:27.752 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:13:27.754 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:13:37.241 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:14:13.354 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:14:15.999 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-18 10:14:16.087 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:14:16.195 PM error : uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:406:5)
+    at ServerResponse.setHeader (node:_http_outgoing:652:11)
+    at ServerResponse.header (C:\laragon\www\inventory-api\node_modules\express\lib\response.js:795:10)
+    at ServerResponse.send (C:\laragon\www\inventory-api\node_modules\express\lib\response.js:175:12)
+    at ServerResponse.json (C:\laragon\www\inventory-api\node_modules\express\lib\response.js:279:15)
+    at C:\laragon\www\inventory-api\src\middleware\admin-middleware.ts:26:28
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\laragon\www\inventory-api\src\middleware\admin-middleware.ts:5:58)
+ [LOGGER] 2024-07-18 10:15:27.305 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:16:29.223 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:16:47.149 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-18 10:16:47.275 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:17:29.106 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:17:35.031 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-18 10:17:35.136 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:18:16.706 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:19:44.579 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:19:49.247 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-18 10:19:49.343 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:20:12.305 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:20:12.321 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:20:58.258 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:20:58.268 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:20:58.270 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:21:55.816 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:22:18.237 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-18 10:22:18.314 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:23:59.205 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 10:24:02.931 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-18 10:24:03.032 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:24:17.276 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:24:17.279 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:24:28.815 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:24:28.825 PM info : [object Object]
