@@ -6,6 +6,13 @@ export type CreateUserRequest = {
     password: string;
 };
 
+export type CreateUserWithRoleRequest = {
+    email: string;
+    username: string;
+    password: string;
+    role: string;
+};
+
 export type LoginUserRequest = {
     email: string;
     password: string;
@@ -37,6 +44,10 @@ export type UserResponseToken = {
     username: string;
     access_token: string;
     refresh_token: string;
+};
+
+export type UpdateUserProfileRequest = {
+    username: string;
 };
 
 export function toUserRole(user: User, role: Role | null): UserRole {

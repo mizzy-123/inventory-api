@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from "express";
-import { CreateUserRequest, LoginUserRequest } from "../model/user-model";
+import { CreateUserRequest, CreateUserWithRoleRequest, LoginUserRequest, UpdateUserProfileRequest } from "../model/user-model";
 import { UserService } from "../service/user-service";
+import { AuthenticateRequest } from "../types/authenticatedRequest";
 
 export class UserController {
     static async register(req: Request, res: Response, next: NextFunction) {
@@ -32,5 +33,39 @@ export class UserController {
         } catch (error) {
             next(error);
         }
+    }
+
+    static async updateUserProfile(req: AuthenticateRequest, res: Response, next: NextFunction) {
+        try {
+            const request: UpdateUserProfileRequest = req.body as UpdateUserProfileRequest;
+            const response = await UserService.updateUserProfile(request, req.user);
+            res.status(200).json({
+                message: "Update successfull",
+                data: response,
+            });
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    static async createUser(req: AuthenticateRequest, res: Response, next: NextFunction) {
+        try {
+            const request: CreateUserWithRoleRequest = req.body as CreateUserWithRoleRequest;
+            const response = await UserService.createUserWithRole(request);
+            res.status(201).json({
+                message: "Create User Successfull",
+                data: response,
+            });
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    static async updateUserWithRole(req: AuthenticateRequest, res: Response, next: NextFunction) {
+        // try {
+        //     const request:
+        // } catch (error) {
+        //     next(error)
+        // }
     }
 }

@@ -1,0 +1,91 @@
+ [LOGGER] 2024-07-19 12:06:08.431 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 12:09:49.670 AM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controller/user-controller.ts[0m:[93m2[0m:[93m47[0m - [91merror[0m[90m TS2724: [0m'"../model/user-model"' has no exported member named 'UpdateUserRequest'. Did you mean 'CreateUserRequest'?
+
+[7m2[0m import { CreateUserRequest, LoginUserRequest, UpdateUserRequest } from "../model/user-model";
+[7m [0m [91m                                              ~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controller/user-controller.ts[0m:[93m2[0m:[93m47[0m - [91merror[0m[90m TS2724: [0m'"../model/user-model"' has no exported member named 'UpdateUserRequest'. Did you mean 'CreateUserRequest'?
+
+[7m2[0m import { CreateUserRequest, LoginUserRequest, UpdateUserRequest } from "../model/user-model";
+[7m [0m [91m                                              ~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-19 12:12:32.535 AM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controller/user-controller.ts[0m:[93m2[0m:[93m47[0m - [91merror[0m[90m TS2724: [0m'"../model/user-model"' has no exported member named 'UpdateUserRequest'. Did you mean 'CreateUserRequest'?
+
+[7m2[0m import { CreateUserRequest, LoginUserRequest, UpdateUserRequest } from "../model/user-model";
+[7m [0m [91m                                              ~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controller/user-controller.ts[0m:[93m2[0m:[93m47[0m - [91merror[0m[90m TS2724: [0m'"../model/user-model"' has no exported member named 'UpdateUserRequest'. Did you mean 'CreateUserRequest'?
+
+[7m2[0m import { CreateUserRequest, LoginUserRequest, UpdateUserRequest } from "../model/user-model";
+[7m [0m [91m                                              ~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-19 12:16:05.382 AM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controller/user-controller.ts[0m:[93m54[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'createUserWithRole' does not exist on type 'typeof UserService'.
+
+[7m54[0m             const response = await UserService.createUserWithRole(request);
+[7m  [0m [91m                                               ~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controller/user-controller.ts[0m:[93m54[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'createUserWithRole' does not exist on type 'typeof UserService'.
+
+[7m54[0m             const response = await UserService.createUserWithRole(request);
+[7m  [0m [91m                                               ~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-19 12:17:59.387 AM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controller/user-controller.ts[0m:[93m54[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'createUserWithRole' does not exist on type 'typeof UserService'.
+
+[7m54[0m             const response = await UserService.createUserWithRole(request);
+[7m  [0m [91m                                               ~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controller/user-controller.ts[0m:[93m54[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'createUserWithRole' does not exist on type 'typeof UserService'.
+
+[7m54[0m             const response = await UserService.createUserWithRole(request);
+[7m  [0m [91m                                               ~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-19 12:30:54.132 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 12:31:13.039 AM info : Listening on http://localhost:4000

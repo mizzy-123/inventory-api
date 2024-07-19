@@ -131,3 +131,32 @@ Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the cli
  [LOGGER] 2024-07-18 10:24:17.279 PM info : [object Object]
  [LOGGER] 2024-07-18 10:24:28.815 PM info : [object Object]
  [LOGGER] 2024-07-18 10:24:28.825 PM info : [object Object]
+ [LOGGER] 2024-07-18 10:29:28.751 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 11:00:42.269 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/index.ts[0m:[93m4[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"../middleware/authenticate-middleware"' has no exported member 'authenticateMiddleware'.
+
+[7m4[0m import { authenticateMiddleware } from "../middleware/authenticate-middleware";
+[7m [0m [91m         ~~~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/index.ts[0m:[93m4[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"../middleware/authenticate-middleware"' has no exported member 'authenticateMiddleware'.
+
+[7m4[0m import { authenticateMiddleware } from "../middleware/authenticate-middleware";
+[7m [0m [91m         ~~~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-18 11:12:47.070 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 11:39:41.455 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 11:49:44.179 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 11:50:58.685 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 11:52:34.315 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-18 11:52:52.221 PM info : Listening on http://localhost:4000

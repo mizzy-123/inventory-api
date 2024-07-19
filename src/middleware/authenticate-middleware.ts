@@ -3,7 +3,7 @@ import { verifyAcessToken } from "../utils/jwt";
 import { AuthenticateRequest } from "../types/authenticatedRequest";
 import { UserResponse } from "../model/user-model";
 
-export const authenticate = (req: AuthenticateRequest, res: Response, next: NextFunction) => {
+export const authenticateMiddleware = (req: AuthenticateRequest, res: Response, next: NextFunction) => {
     const authHeader = req.headers.authorization;
     const token = authHeader?.split(" ")[1];
 
