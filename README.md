@@ -55,7 +55,7 @@ yarn build
 Atau menggunakan `npm`:
 
 ```bash
-ynpm run build
+npm run build
 ```
 
 Kemudian, jalankan aplikasi:
