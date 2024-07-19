@@ -1,4 +1,4 @@
-import { CreateUserRequest, CreateUserWithRoleRequest, LoginUserRequest, toUserResponse, toUserResponseToken, UpdateUserProfileRequest, UserResponse, UserResponseToken } from "../model/user-model";
+import { CreateUserRequest, CreateUserWithRoleRequest, LoginUserRequest, toUserResponse, toUserResponseToken, toUserRole, UpdateUserProfileRequest, UpdateUserRoleRequest, UserResponse, UserResponseToken } from "../model/user-model";
 import { Validation } from "../validation/validation";
 import { UserValidation } from "../validation/user-validation";
 import bcrypt from "bcrypt";
@@ -42,15 +42,17 @@ export class UserService {
         });
 
         if (!user) {
-            throw new ResponseError(401, "Username or password is wrong");
+            throw new ResponseError(400, "Username or password is wrong");
         }
 
         const isPasswordValid = await bcrypt.compare(loginRequest.password, user.password);
         if (!isPasswordValid) {
-            throw new ResponseError(401, "Username or password is wrong");
+            throw new ResponseError(400, "Username or password is wrong");
         }
 
-        const userResponse = toUserResponse(user);
+        const userResponse = toUserRole(user, user.roles);
+
+        console.log(userResponse);
 
         const accessToken = generateAccessToken(userResponse);
         const refreshToken = generateRefreshToken(userResponse);
@@ -130,7 +132,80 @@ export class UserService {
                 break;
             }
             default:
-                throw new ResponseError(401, "Invalid role");
+                throw new ResponseError(400, "Invalid role");
+        }
+
+        return toUserResponse(resultCreateUser);
+    }
+
+    static async updateUserRole(request: UpdateUserRoleRequest, id: string): Promise<UserResponse> {
+        const resultValidation = Validation.validate(UserValidation.UPDATE_USER_ROLE, request);
+
+        let resultCreateUser: User | null;
+        switch (resultValidation.role) {
+            case "admin": {
+                const role = await prismaClient.role.update({
+                    data: {
+                        admin: true,
+                    },
+                    where: {
+                        users_id: id,
+                    },
+                });
+
+                const user = await prismaClient.user.findUnique({
+                    where: {
+                        id: role.users_id,
+                    },
+                });
+
+                resultCreateUser = user;
+                break;
+            }
+            case "manager": {
+                const role = await prismaClient.role.update({
+                    data: {
+                        manager: true,
+                    },
+                    where: {
+                        users_id: id,
+                    },
+                });
+
+                const user = await prismaClient.user.findUnique({
+                    where: {
+                        id: role.users_id,
+                    },
+                });
+
+                resultCreateUser = user;
+                break;
+            }
+            case "staff": {
+                const role = await prismaClient.role.update({
+                    data: {
+                        staff: true,
+                    },
+                    where: {
+                        users_id: id,
+                    },
+                });
+
+                const user = await prismaClient.user.findUnique({
+                    where: {
+                        id: role.users_id,
+                    },
+                });
+
+                resultCreateUser = user;
+                break;
+            }
+            default:
+                throw new ResponseError(400, "Invalid role");
+        }
+
+        if (!resultCreateUser) {
+            throw new ResponseError(404, "User not found");
         }
 
         return toUserResponse(resultCreateUser);

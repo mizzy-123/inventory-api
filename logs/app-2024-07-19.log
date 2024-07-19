@@ -89,3 +89,56 @@ TSError: ⨯ Unable to compile TypeScript:
     at Module.require (node:internal/modules/cjs/loader:1115:19)
  [LOGGER] 2024-07-19 12:30:54.132 AM info : Listening on http://localhost:4000
  [LOGGER] 2024-07-19 12:31:13.039 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 06:59:14.506 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 07:27:33.400 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 07:31:28.871 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 07:31:50.249 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 07:32:34.318 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-19 07:32:36.478 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:32:36.525 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:47:56.113 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:50:08.389 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:50:08.408 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:50:08.770 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:50:08.861 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:50:08.920 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:50:08.924 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:50:08.927 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:56:44.601 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:56:44.722 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:56:44.895 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:56:44.913 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:56:44.972 PM error : 
+Invalid `prismaClient.user.create()` invocation in
+C:\laragon\www\inventory-api\src\service\user-service.ts:118:54
+
+  115     break;
+  116 }
+  117 case "staff": {
+→ 118     const user = await prismaClient.user.create(
+Unique constraint failed on the fields: (`email`)
+ [LOGGER] 2024-07-19 07:57:07.005 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:57:07.401 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:57:08.199 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:57:08.203 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:57:08.211 PM info : [object Object]
+ [LOGGER] 2024-07-19 07:57:08.217 PM error : 
+Invalid `prismaClient.user.create()` invocation in
+C:\laragon\www\inventory-api\src\service\user-service.ts:118:54
+
+  115     break;
+  116 }
+  117 case "staff": {
+→ 118     const user = await prismaClient.user.create(
+Unique constraint failed on the fields: (`email`)
+ [LOGGER] 2024-07-19 08:00:11.644 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 08:00:41.813 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 08:01:17.150 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 08:01:29.261 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-19 08:01:29.380 PM info : [object Object]
+ [LOGGER] 2024-07-19 08:01:29.400 PM info : [object Object]
+ [LOGGER] 2024-07-19 08:06:34.219 PM info : [object Object]
+ [LOGGER] 2024-07-19 08:07:26.555 PM info : [object Object]
+ [LOGGER] 2024-07-19 08:07:26.583 PM info : [object Object]
+ [LOGGER] 2024-07-19 08:07:27.480 PM info : [object Object]
+ [LOGGER] 2024-07-19 08:07:27.488 PM info : [object Object]

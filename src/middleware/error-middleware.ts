@@ -9,8 +9,8 @@ export const errorMiddleware = async (error: Error, req: Request, res: Response,
             message: err.message,
         }));
         return res.status(400).json({
-            error: errorMessges,
             message: `${error.errors[0].path[0]} ${error.errors[0].message}`,
+            error: errorMessges,
         });
     } else if (error instanceof ResponseError) {
         return res.status(error.status).json({

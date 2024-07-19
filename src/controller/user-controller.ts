@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { CreateUserRequest, CreateUserWithRoleRequest, LoginUserRequest, UpdateUserProfileRequest } from "../model/user-model";
+import { CreateUserRequest, CreateUserWithRoleRequest, LoginUserRequest, UpdateUserProfileRequest, UpdateUserRoleRequest } from "../model/user-model";
 import { UserService } from "../service/user-service";
 import { AuthenticateRequest } from "../types/authenticatedRequest";
 
@@ -61,11 +61,17 @@ export class UserController {
         }
     }
 
-    static async updateUserWithRole(req: AuthenticateRequest, res: Response, next: NextFunction) {
-        // try {
-        //     const request:
-        // } catch (error) {
-        //     next(error)
-        // }
+    static async updateUserRole(req: AuthenticateRequest, res: Response, next: NextFunction) {
+        try {
+            const request: UpdateUserRoleRequest = req.body as UpdateUserRoleRequest;
+            const response = await UserService.updateUserRole(request, req.params.id);
+
+            res.status(200).json({
+                message: "Update role user successfull",
+                data: response,
+            });
+        } catch (error) {
+            next(error);
+        }
     }
 }

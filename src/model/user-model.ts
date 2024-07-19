@@ -13,6 +13,10 @@ export type CreateUserWithRoleRequest = {
     role: string;
 };
 
+export type UpdateUserRoleRequest = {
+    role: string;
+};
+
 export type LoginUserRequest = {
     email: string;
     password: string;

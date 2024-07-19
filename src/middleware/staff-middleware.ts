@@ -14,7 +14,7 @@ export const staffMiddleware = async (req: AuthenticateRequest, res: Response, n
             console.log("admin", findRole?.admin);
 
             if (findRole !== null && !findRole.staff) {
-                return res.status(401).json({
+                return res.status(403).json({
                     error: "Unauthorized",
                 });
             }
@@ -22,7 +22,7 @@ export const staffMiddleware = async (req: AuthenticateRequest, res: Response, n
             next(error);
         }
     } else {
-        return res.status(401).json({
+        return res.status(403).json({
             error: "Unauthorized",
         });
     }
