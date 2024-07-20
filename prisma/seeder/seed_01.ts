@@ -18,6 +18,12 @@ async function main() {
         },
     });
 
+    await prisma.userData.create({
+        data: {
+            users_id: mizzy.id,
+        },
+    });
+
     const eka = await prisma.user.upsert({
         where: { email: "eka@gmail.com" },
         update: {},
@@ -30,6 +36,12 @@ async function main() {
                     manager: true,
                 },
             },
+        },
+    });
+
+    await prisma.userData.create({
+        data: {
+            users_id: eka.id,
         },
     });
 

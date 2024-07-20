@@ -142,3 +142,24 @@ Unique constraint failed on the fields: (`email`)
  [LOGGER] 2024-07-19 08:07:26.583 PM info : [object Object]
  [LOGGER] 2024-07-19 08:07:27.480 PM info : [object Object]
  [LOGGER] 2024-07-19 08:07:27.488 PM info : [object Object]
+ [LOGGER] 2024-07-19 08:20:50.472 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 10:41:12.196 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 10:46:37.290 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 10:48:48.428 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 10:57:55.764 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 10:59:33.700 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 11:01:01.017 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 11:05:33.270 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 11:11:59.071 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 11:15:18.374 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 11:17:07.523 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-19 11:17:07.624 PM info : [object Object]
+ [LOGGER] 2024-07-19 11:17:07.639 PM info : [object Object]
+ [LOGGER] 2024-07-19 11:20:32.461 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 11:22:00.889 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 11:24:14.561 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 11:25:15.142 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 11:26:21.259 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 11:30:26.930 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 11:32:40.117 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-19 11:33:49.391 PM info : Listening on http://localhost:4000

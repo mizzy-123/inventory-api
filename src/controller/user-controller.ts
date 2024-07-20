@@ -38,9 +38,21 @@ export class UserController {
     static async updateUserProfile(req: AuthenticateRequest, res: Response, next: NextFunction) {
         try {
             const request: UpdateUserProfileRequest = req.body as UpdateUserProfileRequest;
-            const response = await UserService.updateUserProfile(request, req.user);
+            const response = await UserService.updateUserProfile(request, req.user, req.file);
             res.status(200).json({
                 message: "Update successfull",
+                data: response,
+            });
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    static async getUserProfile(req: AuthenticateRequest, res: Response, next: NextFunction) {
+        try {
+            const response = await UserService.getUserProfile(req.user);
+            res.status(200).json({
+                message: "Get user profile succesfull",
                 data: response,
             });
         } catch (error) {
@@ -74,4 +86,12 @@ export class UserController {
             next(error);
         }
     }
+
+    // static async changePassword(req: AuthenticateRequest, res: Response, next: NextFunction){
+    //     try {
+
+    //     } catch (error) {
+
+    //     }
+    // }
 }

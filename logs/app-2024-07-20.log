@@ -1,0 +1,257 @@
+ [LOGGER] 2024-07-20 06:26:08.151 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 06:33:30.459 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 06:35:55.964 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 06:37:15.443 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 06:40:37.405 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 06:45:05.958 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 06:45:35.378 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 06:57:18.121 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:00:51.217 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:01:37.784 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:02:14.203 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:18:46.775 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:19:16.700 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:20:42.652 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:24:42.102 AM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controller/user-controller.ts[0m:[93m44[0m:[93m27[0m - [91merror[0m[90m TS2339: [0mProperty 'username' does not exist on type 'AuthenticateRequest'.
+
+[7m44[0m                 data: req.username,
+[7m  [0m [91m                          ~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controller/user-controller.ts[0m:[93m44[0m:[93m27[0m - [91merror[0m[90m TS2339: [0mProperty 'username' does not exist on type 'AuthenticateRequest'.
+
+[7m44[0m                 data: req.username,
+[7m  [0m [91m                          ~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-20 07:25:57.575 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:26:58.331 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:32:45.607 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:35:41.713 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:37:43.303 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:40:40.994 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:42:15.665 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:44:44.507 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:46:37.813 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:48:59.474 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:50:18.660 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:51:21.334 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:53:13.001 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:58:56.849 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:59:58.253 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 08:03:51.731 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 08:04:49.955 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 08:06:17.938 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 08:07:43.939 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 08:08:50.596 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 08:09:54.747 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 08:16:20.589 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 08:16:58.692 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 08:28:06.346 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 08:48:53.532 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 08:49:26.240 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 08:52:08.643 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 08:54:14.957 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 08:58:07.801 AM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/service/user-service.ts[0m:[93m66[0m:[93m31[0m - [91merror[0m[90m TS2339: [0mProperty 'photo' does not exist on type 'UpdateUserProfileRequest'.
+
+[7m66[0m         if (!resultValidation.photo) {
+[7m  [0m [91m                              ~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/service/user-service.ts[0m:[93m66[0m:[93m31[0m - [91merror[0m[90m TS2339: [0mProperty 'photo' does not exist on type 'UpdateUserProfileRequest'.
+
+[7m66[0m         if (!resultValidation.photo) {
+[7m  [0m [91m                              ~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-20 08:59:25.908 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 09:00:15.526 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 09:04:19.067 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 09:05:22.775 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 09:06:28.419 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 09:07:59.169 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 09:08:39.629 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 09:09:50.845 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 05:16:27.002 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 05:24:31.779 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 05:26:23.602 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 05:26:45.436 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 05:28:41.398 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/service/user-service.ts[0m:[93m106[0m:[93m29[0m - [91merror[0m[90m TS18046: [0m'error' is of type 'unknown'.
+
+[7m106[0m                         if (error.code !== "ENOENT") {
+[7m   [0m [91m                            ~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/service/user-service.ts[0m:[93m106[0m:[93m29[0m - [91merror[0m[90m TS18046: [0m'error' is of type 'unknown'.
+
+[7m106[0m                         if (error.code !== "ENOENT") {
+[7m   [0m [91m                            ~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-20 05:29:30.273 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 05:31:08.026 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-20 05:31:09.804 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:31:09.903 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:31:09.935 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:31:10.027 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:31:10.043 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:31:10.047 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:31:10.058 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:31:10.068 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:32:32.033 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:32:32.051 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:32:38.921 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:32:43.274 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:32:57.514 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:32:57.520 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:32:57.523 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:32:57.534 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:32:57.538 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:32:57.543 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:32:57.549 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:32:57.552 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:32:57.554 PM info : [object Object]
+ [LOGGER] 2024-07-20 05:40:04.775 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m11[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'getUserProfile' does not exist on type 'typeof UserController'.
+
+[7m11[0m apiRouter.get("/users/profile", UserController.getUserProfile);
+[7m  [0m [91m                                               ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m11[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'getUserProfile' does not exist on type 'typeof UserController'.
+
+[7m11[0m apiRouter.get("/users/profile", UserController.getUserProfile);
+[7m  [0m [91m                                               ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-20 05:42:18.007 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m11[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'getUserProfile' does not exist on type 'typeof UserController'.
+
+[7m11[0m apiRouter.get("/users/profile", UserController.getUserProfile);
+[7m  [0m [91m                                               ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m11[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'getUserProfile' does not exist on type 'typeof UserController'.
+
+[7m11[0m apiRouter.get("/users/profile", UserController.getUserProfile);
+[7m  [0m [91m                                               ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-20 05:43:43.185 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controller/user-controller.ts[0m:[93m53[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'getUserProfile' does not exist on type 'typeof UserService'.
+
+[7m53[0m             const response = await UserService.getUserProfile(req.user);
+[7m  [0m [91m                                               ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controller/user-controller.ts[0m:[93m53[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'getUserProfile' does not exist on type 'typeof UserService'.
+
+[7m53[0m             const response = await UserService.getUserProfile(req.user);
+[7m  [0m [91m                                               ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-20 05:45:56.574 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controller/user-controller.ts[0m:[93m53[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'getUserProfile' does not exist on type 'typeof UserService'.
+
+[7m53[0m             const response = await UserService.getUserProfile(req.user);
+[7m  [0m [91m                                               ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controller/user-controller.ts[0m:[93m53[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'getUserProfile' does not exist on type 'typeof UserService'.
+
+[7m53[0m             const response = await UserService.getUserProfile(req.user);
+[7m  [0m [91m                                               ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-20 05:52:40.024 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controller/user-controller.ts[0m:[93m53[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'getUserProfile' does not exist on type 'typeof UserService'.
+
+[7m53[0m             const response = await UserService.getUserProfile(req.user);
+[7m  [0m [91m                                               ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controller/user-controller.ts[0m:[93m53[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'getUserProfile' does not exist on type 'typeof UserService'.
+
+[7m53[0m             const response = await UserService.getUserProfile(req.user);
+[7m  [0m [91m                                               ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-20 07:35:12.921 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:36:05.634 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-20 07:36:06.241 PM info : [object Object]
+ [LOGGER] 2024-07-20 07:36:06.252 PM info : [object Object]

@@ -1,4 +1,4 @@
-import { Role, User } from "@prisma/client";
+import { Role, User, UserData } from "@prisma/client";
 
 export type CreateUserRequest = {
     email: string;
@@ -53,6 +53,30 @@ export type UserResponseToken = {
 export type UpdateUserProfileRequest = {
     username: string;
 };
+
+export type GetUserWithUserDataResponse = {
+    id: string;
+    username: string;
+    email: string;
+    created_at: Date;
+    updated_at: Date;
+    user_data: {
+        foto: string | null;
+    };
+};
+
+export function toGetUserWithUserDataResponse(user: User, userData: UserData): GetUserWithUserDataResponse {
+    return {
+        id: user.id,
+        username: user.username,
+        email: user.email,
+        created_at: user.created_at,
+        updated_at: user.updated_at,
+        user_data: {
+            foto: userData.foto,
+        },
+    };
+}
 
 export function toUserRole(user: User, role: Role | null): UserRole {
     return {

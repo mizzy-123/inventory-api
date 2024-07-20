@@ -1,4 +1,17 @@
-import { CreateUserRequest, CreateUserWithRoleRequest, LoginUserRequest, toUserResponse, toUserResponseToken, toUserRole, UpdateUserProfileRequest, UpdateUserRoleRequest, UserResponse, UserResponseToken } from "../model/user-model";
+import {
+    CreateUserRequest,
+    CreateUserWithRoleRequest,
+    GetUserWithUserDataResponse,
+    LoginUserRequest,
+    toGetUserWithUserDataResponse,
+    toUserResponse,
+    toUserResponseToken,
+    toUserRole,
+    UpdateUserProfileRequest,
+    UpdateUserRoleRequest,
+    UserResponse,
+    UserResponseToken,
+} from "../model/user-model";
 import { Validation } from "../validation/validation";
 import { UserValidation } from "../validation/user-validation";
 import bcrypt from "bcrypt";
@@ -6,6 +19,8 @@ import { prismaClient } from "../application/database";
 import { ResponseError } from "../error/response-error";
 import { generateAccessToken, generateRefreshToken } from "../utils/jwt";
 import { User } from "@prisma/client";
+import path from "path";
+import fs from "fs";
 
 export class UserService {
     static async register(request: CreateUserRequest): Promise<UserResponse> {
@@ -22,6 +37,9 @@ export class UserService {
                     create: {
                         staff: true,
                     },
+                },
+                user_data: {
+                    create: {},
                 },
             },
         });
@@ -52,26 +70,100 @@ export class UserService {
 
         const userResponse = toUserRole(user, user.roles);
 
-        console.log(userResponse);
-
         const accessToken = generateAccessToken(userResponse);
         const refreshToken = generateRefreshToken(userResponse);
 
         return toUserResponseToken(user, accessToken, refreshToken);
     }
 
-    static async updateUserProfile(request: UpdateUserProfileRequest, user: UserResponse | undefined): Promise<UserResponse> {
+    static async updateUserProfile(request: UpdateUserProfileRequest, user: UserResponse | undefined, photo: Express.Multer.File | undefined): Promise<UserResponse> {
         const resultValidation = Validation.validate(UserValidation.UPDATE_USER_PROFILE, request);
-        const userResponse = await prismaClient.user.update({
+
+        if (!user) {
+            throw new ResponseError(400, "User not found");
+        }
+
+        if (photo == undefined) {
+            const userResponse = await prismaClient.user.update({
+                where: {
+                    id: user?.id,
+                },
+                data: {
+                    username: resultValidation.username,
+                },
+            });
+
+            return toUserResponse(userResponse);
+        } else {
+            const findUser = await prismaClient.user.findUnique({
+                where: {
+                    id: user.id,
+                },
+                include: {
+                    user_data: true,
+                },
+            });
+
+            if (!findUser) {
+                throw new ResponseError(404, "User not found");
+            }
+
+            const userData = findUser.user_data;
+
+            if (userData?.foto) {
+                const oldImagePath = path.join("public", "images", userData.foto);
+                if (fs.existsSync(oldImagePath)) {
+                    try {
+                        fs.unlinkSync(oldImagePath);
+                    } catch (error) {
+                        throw new ResponseError(500, "Error deleting old photo");
+                    }
+                }
+            }
+
+            const userResponse = await prismaClient.user.update({
+                where: {
+                    id: user?.id,
+                },
+                data: {
+                    username: resultValidation.username,
+                    user_data: {
+                        update: {
+                            data: {
+                                foto: photo.filename,
+                            },
+                        },
+                    },
+                },
+            });
+
+            return toUserResponse(userResponse);
+        }
+    }
+
+    static async getUserProfile(user: UserResponse | undefined): Promise<GetUserWithUserDataResponse> {
+        if (!user) {
+            throw new ResponseError(400, "User not found");
+        }
+
+        const userResponse = await prismaClient.user.findUnique({
             where: {
-                id: user?.id,
+                id: user.id,
             },
-            data: {
-                username: resultValidation.username,
+            include: {
+                user_data: true,
             },
         });
 
-        return toUserResponse(userResponse);
+        if (!userResponse) {
+            throw new ResponseError(500, "User not found");
+        }
+
+        if (!userResponse.user_data) {
+            throw new ResponseError(500, "User data not found");
+        }
+
+        return toGetUserWithUserDataResponse(userResponse, userResponse.user_data);
     }
 
     static async createUserWithRole(request: CreateUserWithRoleRequest): Promise<UserResponse> {
@@ -91,6 +183,9 @@ export class UserService {
                                 admin: true,
                             },
                         },
+                        user_data: {
+                            create: {},
+                        },
                     },
                 });
 
@@ -108,6 +203,9 @@ export class UserService {
                                 manager: true,
                             },
                         },
+                        user_data: {
+                            create: {},
+                        },
                     },
                 });
 
@@ -124,6 +222,9 @@ export class UserService {
                             create: {
                                 staff: true,
                             },
+                        },
+                        user_data: {
+                            create: {},
                         },
                     },
                 });
