@@ -7,6 +7,7 @@ import {
     toUserResponse,
     toUserResponseToken,
     toUserRole,
+    UpdatePasswordUserRequest,
     UpdateUserProfileRequest,
     UpdateUserRoleRequest,
     UserResponse,
@@ -74,6 +75,27 @@ export class UserService {
         const refreshToken = generateRefreshToken(userResponse);
 
         return toUserResponseToken(user, accessToken, refreshToken);
+    }
+
+    static async changePassword(request: UpdatePasswordUserRequest, user: UserResponse | undefined): Promise<UserResponse> {
+        const changePasswordRequest = Validation.validate(UserValidation.UPDATE_PASSWORD, request);
+
+        if (!user) {
+            throw new ResponseError(400, "User not found");
+        }
+
+        changePasswordRequest.password = await bcrypt.hash(changePasswordRequest.password, 10);
+
+        const userResponse = await prismaClient.user.update({
+            where: {
+                id: user.id,
+            },
+            data: {
+                password: changePasswordRequest.password,
+            },
+        });
+
+        return toUserResponse(userResponse);
     }
 
     static async updateUserProfile(request: UpdateUserProfileRequest, user: UserResponse | undefined, photo: Express.Multer.File | undefined): Promise<UserResponse> {

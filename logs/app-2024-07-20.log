@@ -255,3 +255,95 @@ TSError: ⨯ Unable to compile TypeScript:
  [LOGGER] 2024-07-20 07:36:05.634 PM info : Starting a postgresql pool with 5 connections.
  [LOGGER] 2024-07-20 07:36:06.241 PM info : [object Object]
  [LOGGER] 2024-07-20 07:36:06.252 PM info : [object Object]
+ [LOGGER] 2024-07-20 07:48:23.484 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 07:51:03.364 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m12[0m:[93m49[0m - [91merror[0m[90m TS2339: [0mProperty 'changePassword' does not exist on type 'typeof UserController'.
+
+[7m12[0m apiRouter.put("/users/password", UserController.changePassword);
+[7m  [0m [91m                                                ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m12[0m:[93m49[0m - [91merror[0m[90m TS2339: [0mProperty 'changePassword' does not exist on type 'typeof UserController'.
+
+[7m12[0m apiRouter.put("/users/password", UserController.changePassword);
+[7m  [0m [91m                                                ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-20 07:52:10.976 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m12[0m:[93m49[0m - [91merror[0m[90m TS2339: [0mProperty 'changePassword' does not exist on type 'typeof UserController'.
+
+[7m12[0m apiRouter.put("/users/password", UserController.changePassword);
+[7m  [0m [91m                                                ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m12[0m:[93m49[0m - [91merror[0m[90m TS2339: [0mProperty 'changePassword' does not exist on type 'typeof UserController'.
+
+[7m12[0m apiRouter.put("/users/password", UserController.changePassword);
+[7m  [0m [91m                                                ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-20 07:52:51.618 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m12[0m:[93m49[0m - [91merror[0m[90m TS2339: [0mProperty 'changePassword' does not exist on type 'typeof UserController'.
+
+[7m12[0m apiRouter.put("/users/password", UserController.changePassword);
+[7m  [0m [91m                                                ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m12[0m:[93m49[0m - [91merror[0m[90m TS2339: [0mProperty 'changePassword' does not exist on type 'typeof UserController'.
+
+[7m12[0m apiRouter.put("/users/password", UserController.changePassword);
+[7m  [0m [91m                                                ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-20 07:54:51.553 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m12[0m:[93m49[0m - [91merror[0m[90m TS2339: [0mProperty 'changePassword' does not exist on type 'typeof UserController'.
+
+[7m12[0m apiRouter.put("/users/password", UserController.changePassword);
+[7m  [0m [91m                                                ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m12[0m:[93m49[0m - [91merror[0m[90m TS2339: [0mProperty 'changePassword' does not exist on type 'typeof UserController'.
+
+[7m12[0m apiRouter.put("/users/password", UserController.changePassword);
+[7m  [0m [91m                                                ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-20 08:05:01.799 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-20 08:06:05.624 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-20 08:06:05.792 PM info : [object Object]

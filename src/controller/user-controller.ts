@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { CreateUserRequest, CreateUserWithRoleRequest, LoginUserRequest, UpdateUserProfileRequest, UpdateUserRoleRequest } from "../model/user-model";
+import { CreateUserRequest, CreateUserWithRoleRequest, LoginUserRequest, UpdatePasswordUserRequest, UpdateUserProfileRequest, UpdateUserRoleRequest } from "../model/user-model";
 import { UserService } from "../service/user-service";
 import { AuthenticateRequest } from "../types/authenticatedRequest";
 
@@ -87,11 +87,17 @@ export class UserController {
         }
     }
 
-    // static async changePassword(req: AuthenticateRequest, res: Response, next: NextFunction){
-    //     try {
+    static async changePassword(req: AuthenticateRequest, res: Response, next: NextFunction) {
+        try {
+            const request: UpdatePasswordUserRequest = req.body as UpdatePasswordUserRequest;
+            const response = await UserService.changePassword(request, req.user);
 
-    //     } catch (error) {
-
-    //     }
-    // }
+            res.status(200).json({
+                message: "Change password successfull",
+                data: response,
+            });
+        } catch (error) {
+            next(error);
+        }
+    }
 }

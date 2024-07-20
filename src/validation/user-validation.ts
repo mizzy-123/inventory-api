@@ -26,4 +26,8 @@ export class UserValidation {
     static readonly UPDATE_USER_ROLE = z.object({
         role: z.string(),
     });
+
+    static readonly UPDATE_PASSWORD = z.object({
+        password: z.string().min(1).max(100),
+    });
 }

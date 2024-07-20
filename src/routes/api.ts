@@ -9,6 +9,6 @@ export const apiRouter = Router();
 // User API
 apiRouter.post("/users/profile", upload.single("photo"), UserController.updateUserProfile);
 apiRouter.get("/users/profile", UserController.getUserProfile);
-// apiRouter.put("/users/password", )
+apiRouter.put("/users/password", UserController.changePassword);
 apiRouter.post("/users", adminMiddleware, checkUniqueEmail, UserController.createUser);
 apiRouter.post("/users/:id/role", adminMiddleware, UserController.updateUserRole);
