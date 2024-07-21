@@ -1,0 +1,153 @@
+ [LOGGER] 2024-07-21 07:05:05.945 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 07:05:51.814 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 07:11:01.189 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 07:12:36.619 AM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controller/supplier-contoller.ts[0m:[93m4[0m:[93m33[0m - [91merror[0m[90m TS2306: [0mFile 'C:/laragon/www/inventory-api/src/service/supplier-service.ts' is not a module.
+
+[7m4[0m import { SupplierService } from "../service/supplier-service";
+[7m [0m [91m                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controller/supplier-contoller.ts[0m:[93m4[0m:[93m33[0m - [91merror[0m[90m TS2306: [0mFile 'C:/laragon/www/inventory-api/src/service/supplier-service.ts' is not a module.
+
+[7m4[0m import { SupplierService } from "../service/supplier-service";
+[7m [0m [91m                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-21 07:16:28.582 AM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controller/supplier-contoller.ts[0m:[93m4[0m:[93m33[0m - [91merror[0m[90m TS2306: [0mFile 'C:/laragon/www/inventory-api/src/service/supplier-service.ts' is not a module.
+
+[7m4[0m import { SupplierService } from "../service/supplier-service";
+[7m [0m [91m                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controller/supplier-contoller.ts[0m:[93m4[0m:[93m33[0m - [91merror[0m[90m TS2306: [0mFile 'C:/laragon/www/inventory-api/src/service/supplier-service.ts' is not a module.
+
+[7m4[0m import { SupplierService } from "../service/supplier-service";
+[7m [0m [91m                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-21 07:20:03.647 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 07:22:42.033 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 07:27:59.713 AM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m19[0m:[93m67[0m - [91merror[0m[90m TS2339: [0mProperty 'UpdateSupplier' does not exist on type 'typeof SupplierController'.
+
+[7m19[0m apiRouter.put("/suplier/:id", adminMiddleware, SupplierController.UpdateSupplier);
+[7m  [0m [91m                                                                  ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m19[0m:[93m67[0m - [91merror[0m[90m TS2339: [0mProperty 'UpdateSupplier' does not exist on type 'typeof SupplierController'.
+
+[7m19[0m apiRouter.put("/suplier/:id", adminMiddleware, SupplierController.UpdateSupplier);
+[7m  [0m [91m                                                                  ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-21 07:28:35.581 AM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m19[0m:[93m67[0m - [91merror[0m[90m TS2339: [0mProperty 'UpdateSupplier' does not exist on type 'typeof SupplierController'.
+
+[7m19[0m apiRouter.put("/suplier/:id", adminMiddleware, SupplierController.UpdateSupplier);
+[7m  [0m [91m                                                                  ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m19[0m:[93m67[0m - [91merror[0m[90m TS2339: [0mProperty 'UpdateSupplier' does not exist on type 'typeof SupplierController'.
+
+[7m19[0m apiRouter.put("/suplier/:id", adminMiddleware, SupplierController.UpdateSupplier);
+[7m  [0m [91m                                                                  ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-21 07:33:51.865 AM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controller/supplier-contoller.ts[0m:[93m25[0m:[93m52[0m - [91merror[0m[90m TS2339: [0mProperty 'UpdateSupplier' does not exist on type 'typeof SupplierService'.
+
+[7m25[0m             const response = await SupplierService.UpdateSupplier(request);
+[7m  [0m [91m                                                   ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controller/supplier-contoller.ts[0m:[93m25[0m:[93m52[0m - [91merror[0m[90m TS2339: [0mProperty 'UpdateSupplier' does not exist on type 'typeof SupplierService'.
+
+[7m25[0m             const response = await SupplierService.UpdateSupplier(request);
+[7m  [0m [91m                                                   ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-21 07:36:17.953 AM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controller/supplier-contoller.ts[0m:[93m25[0m:[93m52[0m - [91merror[0m[90m TS2339: [0mProperty 'UpdateSupplier' does not exist on type 'typeof SupplierService'.
+
+[7m25[0m             const response = await SupplierService.UpdateSupplier(request);
+[7m  [0m [91m                                                   ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controller/supplier-contoller.ts[0m:[93m25[0m:[93m52[0m - [91merror[0m[90m TS2339: [0mProperty 'UpdateSupplier' does not exist on type 'typeof SupplierService'.
+
+[7m25[0m             const response = await SupplierService.UpdateSupplier(request);
+[7m  [0m [91m                                                   ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-21 07:37:47.086 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 07:46:35.141 AM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-21 07:46:35.538 AM info : [object Object]
+ [LOGGER] 2024-07-21 07:46:35.700 AM info : [object Object]
+ [LOGGER] 2024-07-21 08:08:39.168 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 08:08:58.486 AM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-21 08:08:58.608 AM info : [object Object]
+ [LOGGER] 2024-07-21 08:08:59.133 AM info : [object Object]
+ [LOGGER] 2024-07-21 08:10:22.720 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 08:11:28.983 AM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-21 08:11:29.160 AM info : [object Object]
+ [LOGGER] 2024-07-21 08:11:29.207 AM info : [object Object]
+ [LOGGER] 2024-07-21 08:12:55.873 AM info : [object Object]
+ [LOGGER] 2024-07-21 08:12:55.878 AM info : [object Object]
+ [LOGGER] 2024-07-21 08:24:00.930 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 08:24:47.974 AM info : Listening on http://localhost:4000

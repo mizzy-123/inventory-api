@@ -28,6 +28,8 @@ Salin file `.env.example` dan ubah namanya menjadi `.env`:
 cp .env.example .env
 ```
 
+Kemudian ubah konfigurasi connection prismanya di .env, disini saya menggunakan database PostgreSQL
+
 ### Langkah 3: Menjalankan Aplikasi
 
 Mode Development
@@ -70,6 +72,20 @@ Atau menggunakan `npm`:
 
 ```bash
 npm run prod
+```
+
+### How to Setup PRISMA
+
+Migrate database
+
+```bash
+npx prisma migrate dev --name init
+```
+
+Seed database
+
+```bash
+npx prisma db seed
 ```
 
 ### Link Documentaion

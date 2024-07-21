@@ -11,8 +11,6 @@ export const adminMiddleware = async (req: AuthenticateRequest, res: Response, n
                 },
             });
 
-            console.log("admin", findRole?.admin);
-
             if (findRole !== null && !findRole.admin) {
                 return res.status(403).json({
                     error: "Unauthorized",

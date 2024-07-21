@@ -3,6 +3,7 @@ import { UserController } from "../controller/user-controller";
 import { adminMiddleware } from "../middleware/admin-middleware";
 import { checkUniqueEmail } from "../middleware/check-unique-email-middleware";
 import upload from "../utils/multer";
+import { SupplierController } from "../controller/supplier-contoller";
 
 export const apiRouter = Router();
 
@@ -12,3 +13,7 @@ apiRouter.get("/users/profile", UserController.getUserProfile);
 apiRouter.put("/users/password", UserController.changePassword);
 apiRouter.post("/users", adminMiddleware, checkUniqueEmail, UserController.createUser);
 apiRouter.post("/users/:id/role", adminMiddleware, UserController.updateUserRole);
+
+// Supplier
+apiRouter.post("/supplier", adminMiddleware, SupplierController.CreateSupplier);
+apiRouter.put("/supplier/:id", adminMiddleware, SupplierController.UpdateSupplier);
