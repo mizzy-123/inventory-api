@@ -69,10 +69,10 @@ model Item {
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 
-  supplier     Supplier  @relation(fields: [supplier_id], references: [id], onDelete: Restrict)
-  supplier_id  BigInt
-  Inventory    Inventory @relation(fields: [inventory_id], references: [id], onDelete: Cascade)
-  inventory_id BigInt
+  supplier    Supplier @relation(fields: [supplier_id], references: [id], onDelete: Restrict)
+  supplier_id BigInt
+
+  inventory Inventory[]
 
   @@map("item")
 }
@@ -85,7 +85,9 @@ model Inventory {
 
   warehouse    Warehouse @relation(fields: [warehouse_id], references: [id], onDelete: Cascade)
   warehouse_id BigInt
-  item         Item[]
+
+  item    Item   @relation(fields: [item_id], references: [id], onDelete: Cascade)
+  item_id BigInt
 
   @@map("inventory")
 }

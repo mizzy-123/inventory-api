@@ -378,3 +378,55 @@ TSError: ⨯ Unable to compile TypeScript:
  [LOGGER] 2024-07-21 04:53:28.563 PM info : Starting a postgresql pool with 5 connections.
  [LOGGER] 2024-07-21 04:53:28.719 PM info : [object Object]
  [LOGGER] 2024-07-21 05:01:07.331 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 05:02:05.176 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 05:02:13.899 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-21 05:02:13.991 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:02:14.071 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:04:25.159 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:04:25.168 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:04:25.180 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:05:23.752 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:05:23.755 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:07:39.501 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:07:39.509 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:07:39.660 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:09:10.827 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:09:10.841 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:09:10.847 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:10:31.061 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:10:31.068 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:10:31.158 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:12:03.577 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:12:03.582 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:12:54.765 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:12:54.770 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:12:54.782 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:14:23.349 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:14:23.428 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:14:23.528 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:15:13.822 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:15:13.825 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:15:13.843 PM info : [object Object]
+ [LOGGER] 2024-07-21 07:38:50.393 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 07:40:53.857 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m9[0m:[93m37[0m - [91merror[0m[90m TS2306: [0mFile 'C:/laragon/www/inventory-api/src/controller/inventory-controller.ts' is not a module.
+
+[7m9[0m import { InventoryController } from "../controller/inventory-controller";
+[7m [0m [91m                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m9[0m:[93m37[0m - [91merror[0m[90m TS2306: [0mFile 'C:/laragon/www/inventory-api/src/controller/inventory-controller.ts' is not a module.
+
+[7m9[0m import { InventoryController } from "../controller/inventory-controller";
+[7m [0m [91m                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)

@@ -6,6 +6,7 @@ import upload from "../utils/multer";
 import { SupplierController } from "../controller/supplier-contoller";
 import { WarehouseController } from "../controller/warehouse-controller";
 import { adminAndManagerMiddleware } from "../middleware/admin-and-manager-middeware";
+import { InventoryController } from "../controller/inventory-controller";
 
 export const apiRouter = Router();
 
@@ -26,3 +27,12 @@ apiRouter.get("/warehouse", adminMiddleware, WarehouseController.getWarehouse);
 apiRouter.post("/warehouse", adminMiddleware, WarehouseController.createWarehouse);
 apiRouter.put("/warehouse/:id", adminMiddleware, WarehouseController.updateWarehouse);
 apiRouter.delete("/warehouse/:id", adminMiddleware, WarehouseController.deleteWarehouse);
+
+// Item
+apiRouter.post("/item");
+apiRouter.put("/item");
+apiRouter.get("/item");
+apiRouter.delete("/item");
+
+// Inventory
+apiRouter.post("/inventory", adminAndManagerMiddleware, InventoryController.createInventory);
