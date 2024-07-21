@@ -13,7 +13,13 @@ export const adminAndManagerMiddleware = async (req: AuthenticateRequest, res: R
 
             console.log("admin", findRole?.admin);
 
-            if ((findRole !== null && !findRole.manager) || (findRole !== null && !findRole.admin)) {
+            if (findRole == null || findRole == undefined) {
+                return res.status(403).json({
+                    error: "Unauthorized",
+                });
+            }
+
+            if (!(findRole.admin || findRole.manager)) {
                 return res.status(403).json({
                     error: "Unauthorized",
                 });

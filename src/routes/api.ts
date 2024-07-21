@@ -4,6 +4,8 @@ import { adminMiddleware } from "../middleware/admin-middleware";
 import { checkUniqueEmail } from "../middleware/check-unique-email-middleware";
 import upload from "../utils/multer";
 import { SupplierController } from "../controller/supplier-contoller";
+import { WarehouseController } from "../controller/warehouse-controller";
+import { adminAndManagerMiddleware } from "../middleware/admin-and-manager-middeware";
 
 export const apiRouter = Router();
 
@@ -15,5 +17,12 @@ apiRouter.post("/users", adminMiddleware, checkUniqueEmail, UserController.creat
 apiRouter.post("/users/:id/role", adminMiddleware, UserController.updateUserRole);
 
 // Supplier
-apiRouter.post("/supplier", adminMiddleware, SupplierController.CreateSupplier);
-apiRouter.put("/supplier/:id", adminMiddleware, SupplierController.UpdateSupplier);
+apiRouter.post("/supplier", adminAndManagerMiddleware, SupplierController.CreateSupplier);
+apiRouter.put("/supplier/:id", adminAndManagerMiddleware, SupplierController.UpdateSupplier);
+apiRouter.get("/supplier", adminAndManagerMiddleware, SupplierController.getSupplier);
+
+// Warehouse
+apiRouter.get("/warehouse", adminMiddleware, WarehouseController.getWarehouse);
+apiRouter.post("/warehouse", adminMiddleware, WarehouseController.createWarehouse);
+apiRouter.put("/warehouse/:id", adminMiddleware, WarehouseController.updateWarehouse);
+apiRouter.delete("/warehouse/:id", adminMiddleware, WarehouseController.deleteWarehouse);

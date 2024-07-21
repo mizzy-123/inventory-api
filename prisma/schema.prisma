@@ -32,7 +32,7 @@ model UserData {
   id   BigInt  @id @default(autoincrement())
   foto String?
 
-  users    User   @relation(fields: [users_id], references: [id])
+  users    User   @relation(fields: [users_id], references: [id], onDelete: Cascade)
   users_id String @unique
 
   @@map("user_data")
@@ -44,7 +44,7 @@ model Role {
   manager Boolean @default(false)
   staff   Boolean @default(false)
 
-  users    User   @relation(fields: [users_id], references: [id])
+  users    User   @relation(fields: [users_id], references: [id], onDelete: Cascade)
   users_id String @unique
 
   @@map("roles")
@@ -69,9 +69,9 @@ model Item {
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 
-  supplier     Supplier  @relation(fields: [supplier_id], references: [id])
+  supplier     Supplier  @relation(fields: [supplier_id], references: [id], onDelete: Restrict)
   supplier_id  BigInt
-  Inventory    Inventory @relation(fields: [inventory_id], references: [id])
+  Inventory    Inventory @relation(fields: [inventory_id], references: [id], onDelete: Cascade)
   inventory_id BigInt
 
   @@map("item")
@@ -83,7 +83,7 @@ model Inventory {
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 
-  warehouse    Warehouse @relation(fields: [warehouse_id], references: [id])
+  warehouse    Warehouse @relation(fields: [warehouse_id], references: [id], onDelete: Cascade)
   warehouse_id BigInt
   item         Item[]
 

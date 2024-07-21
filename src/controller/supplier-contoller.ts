@@ -21,6 +21,19 @@ export class SupplierController {
         }
     }
 
+    static async getSupplier(req: AuthenticateRequest, res: Response, next: NextFunction) {
+        try {
+            const response = await SupplierService.getSupplier();
+
+            res.status(201).json({
+                message: "Get data supplier succesfull",
+                data: JSONBigInt.parse(JSONBigInt.stringify(response)),
+            });
+        } catch (error) {
+            next(error);
+        }
+    }
+
     static async UpdateSupplier(req: AuthenticateRequest, res: Response, next: NextFunction) {
         try {
             const request: UpdateSupplierRequest = req.body as UpdateSupplierRequest;

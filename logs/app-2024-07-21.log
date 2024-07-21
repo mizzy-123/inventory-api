@@ -151,3 +151,230 @@ TSError: ⨯ Unable to compile TypeScript:
  [LOGGER] 2024-07-21 08:12:55.878 AM info : [object Object]
  [LOGGER] 2024-07-21 08:24:00.930 AM info : Listening on http://localhost:4000
  [LOGGER] 2024-07-21 08:24:47.974 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 08:28:19.691 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 08:28:43.740 AM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-21 08:28:43.830 AM info : [object Object]
+ [LOGGER] 2024-07-21 08:28:44.022 AM info : [object Object]
+ [LOGGER] 2024-07-21 08:29:23.839 AM info : [object Object]
+ [LOGGER] 2024-07-21 08:29:23.850 AM info : [object Object]
+ [LOGGER] 2024-07-21 02:45:11.500 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 02:47:52.154 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 02:52:17.771 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 02:57:04.184 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 02:57:51.626 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 03:01:54.402 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m25[0m:[93m29[0m - [91merror[0m[90m TS2304: [0mCannot find name 'ad'.
+
+[7m25[0m apiRouter.get("/warehouse", ad);
+[7m  [0m [91m                            ~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m25[0m:[93m29[0m - [91merror[0m[90m TS2304: [0mCannot find name 'ad'.
+
+[7m25[0m apiRouter.get("/warehouse", ad);
+[7m  [0m [91m                            ~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-21 03:03:59.580 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m25[0m:[93m29[0m - [91merror[0m[90m TS2304: [0mCannot find name 'ad'.
+
+[7m25[0m apiRouter.get("/warehouse", ad);
+[7m  [0m [91m                            ~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m25[0m:[93m29[0m - [91merror[0m[90m TS2304: [0mCannot find name 'ad'.
+
+[7m25[0m apiRouter.get("/warehouse", ad);
+[7m  [0m [91m                            ~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-21 03:04:57.204 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m25[0m:[93m66[0m - [91merror[0m[90m TS2551: [0mProperty 'updateWarehouse' does not exist on type 'typeof WarehouseController'. Did you mean 'createWarehouse'?
+
+[7m25[0m apiRouter.get("/warehouse", adminMiddleware, WarehouseController.updateWarehouse);
+[7m  [0m [91m                                                                 ~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controller/warehouse-controller.ts[0m:[93m7[0m:[93m18[0m
+    [7m7[0m     static async createWarehouse(req: AuthenticateRequest, res: Response, next: NextFunction) {
+    [7m [0m [96m                 ~~~~~~~~~~~~~~~[0m
+    'createWarehouse' is declared here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m25[0m:[93m66[0m - [91merror[0m[90m TS2551: [0mProperty 'updateWarehouse' does not exist on type 'typeof WarehouseController'. Did you mean 'createWarehouse'?
+
+[7m25[0m apiRouter.get("/warehouse", adminMiddleware, WarehouseController.updateWarehouse);
+[7m  [0m [91m                                                                 ~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controller/warehouse-controller.ts[0m:[93m7[0m:[93m18[0m
+    [7m7[0m     static async createWarehouse(req: AuthenticateRequest, res: Response, next: NextFunction) {
+    [7m [0m [96m                 ~~~~~~~~~~~~~~~[0m
+    'createWarehouse' is declared here.
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-21 03:06:05.827 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m25[0m:[93m66[0m - [91merror[0m[90m TS2551: [0mProperty 'updateWarehouse' does not exist on type 'typeof WarehouseController'. Did you mean 'createWarehouse'?
+
+[7m25[0m apiRouter.get("/warehouse", adminMiddleware, WarehouseController.updateWarehouse);
+[7m  [0m [91m                                                                 ~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controller/warehouse-controller.ts[0m:[93m7[0m:[93m18[0m
+    [7m7[0m     static async createWarehouse(req: AuthenticateRequest, res: Response, next: NextFunction) {
+    [7m [0m [96m                 ~~~~~~~~~~~~~~~[0m
+    'createWarehouse' is declared here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m25[0m:[93m66[0m - [91merror[0m[90m TS2551: [0mProperty 'updateWarehouse' does not exist on type 'typeof WarehouseController'. Did you mean 'createWarehouse'?
+
+[7m25[0m apiRouter.get("/warehouse", adminMiddleware, WarehouseController.updateWarehouse);
+[7m  [0m [91m                                                                 ~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controller/warehouse-controller.ts[0m:[93m7[0m:[93m18[0m
+    [7m7[0m     static async createWarehouse(req: AuthenticateRequest, res: Response, next: NextFunction) {
+    [7m [0m [96m                 ~~~~~~~~~~~~~~~[0m
+    'createWarehouse' is declared here.
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-21 03:07:13.601 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m25[0m:[93m70[0m - [91merror[0m[90m TS2551: [0mProperty 'updateWarehouse' does not exist on type 'typeof WarehouseController'. Did you mean 'createWarehouse'?
+
+[7m25[0m apiRouter.put("/warehouse/:id", adminMiddleware, WarehouseController.updateWarehouse);
+[7m  [0m [91m                                                                     ~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controller/warehouse-controller.ts[0m:[93m7[0m:[93m18[0m
+    [7m7[0m     static async createWarehouse(req: AuthenticateRequest, res: Response, next: NextFunction) {
+    [7m [0m [96m                 ~~~~~~~~~~~~~~~[0m
+    'createWarehouse' is declared here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m25[0m:[93m70[0m - [91merror[0m[90m TS2551: [0mProperty 'updateWarehouse' does not exist on type 'typeof WarehouseController'. Did you mean 'createWarehouse'?
+
+[7m25[0m apiRouter.put("/warehouse/:id", adminMiddleware, WarehouseController.updateWarehouse);
+[7m  [0m [91m                                                                     ~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controller/warehouse-controller.ts[0m:[93m7[0m:[93m18[0m
+    [7m7[0m     static async createWarehouse(req: AuthenticateRequest, res: Response, next: NextFunction) {
+    [7m [0m [96m                 ~~~~~~~~~~~~~~~[0m
+    'createWarehouse' is declared here.
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-21 03:07:43.604 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m25[0m:[93m70[0m - [91merror[0m[90m TS2551: [0mProperty 'updateWarehouse' does not exist on type 'typeof WarehouseController'. Did you mean 'createWarehouse'?
+
+[7m25[0m apiRouter.put("/warehouse/:id", adminMiddleware, WarehouseController.updateWarehouse);
+[7m  [0m [91m                                                                     ~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controller/warehouse-controller.ts[0m:[93m7[0m:[93m18[0m
+    [7m7[0m     static async createWarehouse(req: AuthenticateRequest, res: Response, next: NextFunction) {
+    [7m [0m [96m                 ~~~~~~~~~~~~~~~[0m
+    'createWarehouse' is declared here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m25[0m:[93m70[0m - [91merror[0m[90m TS2551: [0mProperty 'updateWarehouse' does not exist on type 'typeof WarehouseController'. Did you mean 'createWarehouse'?
+
+[7m25[0m apiRouter.put("/warehouse/:id", adminMiddleware, WarehouseController.updateWarehouse);
+[7m  [0m [91m                                                                     ~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controller/warehouse-controller.ts[0m:[93m7[0m:[93m18[0m
+    [7m7[0m     static async createWarehouse(req: AuthenticateRequest, res: Response, next: NextFunction) {
+    [7m [0m [96m                 ~~~~~~~~~~~~~~~[0m
+    'createWarehouse' is declared here.
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-21 03:08:48.128 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controller/warehouse-controller.ts[0m:[93m25[0m:[93m47[0m - [91merror[0m[90m TS2551: [0mProperty 'updateWarehouse' does not exist on type 'typeof WarehouseService'. Did you mean 'createWarehouse'?
+
+[7m25[0m             const response = WarehouseService.updateWarehouse(request);
+[7m  [0m [91m                                              ~~~~~~~~~~~~~~~[0m
+
+  [96msrc/service/warehouse-service.ts[0m:[93m8[0m:[93m18[0m
+    [7m8[0m     static async createWarehouse(request: CreateWarehouseRequest): Promise<Warehouse> {
+    [7m [0m [96m                 ~~~~~~~~~~~~~~~[0m
+    'createWarehouse' is declared here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controller/warehouse-controller.ts[0m:[93m25[0m:[93m47[0m - [91merror[0m[90m TS2551: [0mProperty 'updateWarehouse' does not exist on type 'typeof WarehouseService'. Did you mean 'createWarehouse'?
+
+[7m25[0m             const response = WarehouseService.updateWarehouse(request);
+[7m  [0m [91m                                              ~~~~~~~~~~~~~~~[0m
+
+  [96msrc/service/warehouse-service.ts[0m:[93m8[0m:[93m18[0m
+    [7m8[0m     static async createWarehouse(request: CreateWarehouseRequest): Promise<Warehouse> {
+    [7m [0m [96m                 ~~~~~~~~~~~~~~~[0m
+    'createWarehouse' is declared here.
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-21 03:10:03.289 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 03:13:45.475 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 03:15:17.084 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 03:16:41.436 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 03:22:26.894 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 03:53:23.185 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 03:55:41.348 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 03:56:22.275 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 04:21:03.948 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-21 04:53:28.563 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-21 04:53:28.719 PM info : [object Object]
+ [LOGGER] 2024-07-21 05:01:07.331 PM info : Listening on http://localhost:4000

@@ -18,8 +18,12 @@ async function main() {
         },
     });
 
-    await prisma.userData.create({
-        data: {
+    await prisma.userData.upsert({
+        where: {
+            users_id: mizzy.id,
+        },
+        update: {},
+        create: {
             users_id: mizzy.id,
         },
     });
@@ -39,8 +43,12 @@ async function main() {
         },
     });
 
-    await prisma.userData.create({
-        data: {
+    await prisma.userData.upsert({
+        where: {
+            users_id: eka.id,
+        },
+        update: {},
+        create: {
             users_id: eka.id,
         },
     });

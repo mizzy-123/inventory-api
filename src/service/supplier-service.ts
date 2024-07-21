@@ -18,6 +18,11 @@ export class SupplierService {
         return supplierResponse;
     }
 
+    static async getSupplier(): Promise<Supplier[]> {
+        const supplierResponse = await prismaClient.supplier.findMany();
+        return supplierResponse;
+    }
+
     static async UpdateSupplier(request: UpdateSupplierRequest): Promise<Supplier> {
         const supplierRequest = Validation.validate(SupplierValidation.UPDATE_SUPPLIER, request);
 
