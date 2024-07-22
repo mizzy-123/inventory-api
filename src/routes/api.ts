@@ -7,6 +7,7 @@ import { SupplierController } from "../controller/supplier-contoller";
 import { WarehouseController } from "../controller/warehouse-controller";
 import { adminAndManagerMiddleware } from "../middleware/admin-and-manager-middeware";
 import { InventoryController } from "../controller/inventory-controller";
+import { ItemController } from "../controller/item-controller";
 
 export const apiRouter = Router();
 
@@ -29,10 +30,13 @@ apiRouter.put("/warehouse/:id", adminMiddleware, WarehouseController.updateWareh
 apiRouter.delete("/warehouse/:id", adminMiddleware, WarehouseController.deleteWarehouse);
 
 // Item
-apiRouter.post("/item");
-apiRouter.put("/item");
-apiRouter.get("/item");
-apiRouter.delete("/item");
+apiRouter.post("/item", adminAndManagerMiddleware, ItemController.createItem);
+apiRouter.put("/item/:id", adminAndManagerMiddleware, ItemController.updateItem);
+apiRouter.get("/item", adminAndManagerMiddleware, ItemController.getAllItem);
+apiRouter.delete("/item/:id", adminAndManagerMiddleware, ItemController.deleteItem);
 
 // Inventory
-apiRouter.post("/inventory", adminAndManagerMiddleware, InventoryController.createInventory);
+apiRouter.post("/inventory", InventoryController.createInventory);
+apiRouter.put("/inventory/:id/transfer", InventoryController.transferInventory);
+// apiRouter.delete("/inventory/:id/item", adminAndManagerMiddleware);
+// apiRouter.get("/inventory");

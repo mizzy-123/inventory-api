@@ -24,6 +24,10 @@ model User {
   roles Role?
 
   user_data UserData?
+  // history_warehouse HistoryWarehouse[]
+
+  inbound  Inbound[]
+  outbound Outbound[]
 
   @@map("users")
 }
@@ -65,6 +69,7 @@ model Supplier {
 model Item {
   id         BigInt   @id @default(autoincrement())
   name       String   @db.VarChar(100)
+  code       String   @unique
   quantity   Int
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
@@ -73,6 +78,10 @@ model Item {
   supplier_id BigInt
 
   inventory Inventory[]
+  // history_warehouse HistoryWarehouse[]
+
+  inbound  Inbound[]
+  outbound Outbound[]
 
   @@map("item")
 }
@@ -100,6 +109,55 @@ model Warehouse {
   updated_at DateTime @updatedAt
 
   inventory Inventory[]
+  // history_warehouse HistoryWarehouse[]
+
+  inbound  Inbound[]
+  outbound Outbound[]
 
   @@map("warehouse")
+}
+
+// model HistoryWarehouse {
+//   id           BigInt @id @default(autoincrement())
+//   item_id      BigInt
+//   warehouse_id BigInt
+//   users_id     String
+//   quantity     Int
+//   description  String @db.VarChar(255)
+
+//   item      Item      @relation(fields: [item_id], references: [id], onDelete: Cascade)
+//   warehouse Warehouse @relation(fields: [warehouse_id], references: [id], onDelete: Cascade)
+//   users     User      @relation(fields: [users_id], references: [id], onDelete: Cascade)
+
+//   @@map("history_warehouse")
+// }
+
+model Inbound {
+  id           BigInt    @id @default(autoincrement())
+  item_id      BigInt
+  item         Item      @relation(fields: [item_id], references: [id], onDelete: Cascade)
+  users_id     String
+  users        User      @relation(fields: [users_id], references: [id], onDelete: Cascade)
+  warehouse_id BigInt
+  warehouse    Warehouse @relation(fields: [warehouse_id], references: [id], onDelete: Cascade)
+  quantity     Int
+  description  String    @db.VarChar()
+  createdAt    DateTime  @default(now())
+
+  @@map("inbound")
+}
+
+model Outbound {
+  id           BigInt    @id @default(autoincrement())
+  item_id      BigInt
+  item         Item      @relation(fields: [item_id], references: [id], onDelete: Cascade)
+  users_id     String
+  users        User      @relation(fields: [users_id], references: [id], onDelete: Cascade)
+  warehouse_id BigInt
+  warehouse    Warehouse @relation(fields: [warehouse_id], references: [id], onDelete: Cascade)
+  quantity     Int
+  description  String    @db.VarChar(255)
+  createdAt    DateTime  @default(now())
+
+  @@map("outbound")
 }

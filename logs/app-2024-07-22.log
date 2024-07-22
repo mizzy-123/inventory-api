@@ -1,0 +1,251 @@
+ [LOGGER] 2024-07-22 09:47:05.258 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-22 09:47:15.113 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-22 09:47:15.475 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:48:24.855 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:48:24.858 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:48:24.940 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:48:25.192 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:50:38.471 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-22 09:50:55.886 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-22 09:50:55.968 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:50:55.988 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:50:56.000 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:52:59.969 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:52:59.977 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:53:00.049 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:53:00.141 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:55:20.975 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:55:20.978 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:56:14.424 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:56:14.428 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:56:14.701 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:59:18.138 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:59:18.145 PM info : [object Object]
+ [LOGGER] 2024-07-22 09:59:18.332 PM info : [object Object]
+ [LOGGER] 2024-07-22 10:14:41.912 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-22 10:58:19.489 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-22 10:58:19.602 PM info : [object Object]
+ [LOGGER] 2024-07-22 10:58:19.632 PM info : [object Object]
+ [LOGGER] 2024-07-22 10:58:43.599 PM info : [object Object]
+ [LOGGER] 2024-07-22 10:58:43.615 PM info : [object Object]
+ [LOGGER] 2024-07-22 10:58:43.645 PM info : [object Object]
+ [LOGGER] 2024-07-22 10:58:43.660 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:01:12.717 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:01:12.773 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:01:12.804 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:01:12.840 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:01:12.925 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:01:12.953 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:01:12.969 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:01:12.974 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:03:58.026 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/service/inventory-service.ts[0m:[93m155[0m:[93m21[0m - [91merror[0m[90m TS2322: [0mType '{ warehouse_id: number; item_id: bigint | undefined; }' is not assignable to type 'InventoryWhereUniqueInput'.
+  Type '{ warehouse_id: number; item_id: bigint | undefined; }' is not assignable to type '{ id: number | bigint; } & { id?: number | bigint | undefined; AND?: InventoryWhereInput | InventoryWhereInput[] | undefined; OR?: InventoryWhereInput[] | undefined; ... 7 more ...; item?: (Without<...> & ItemWhereInput) | ... 1 more ... | undefined; }'.
+    Property 'id' is missing in type '{ warehouse_id: number; item_id: bigint | undefined; }' but required in type '{ id: number | bigint; }'.
+
+[7m155[0m                     where: {
+[7m   [0m [91m                    ~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m7635[0m:[93m5[0m
+    [7m7635[0m     where: InventoryWhereUniqueInput
+    [7m    [0m [96m    ~~~~~[0m
+    The expected type comes from property 'where' which is declared here on type '{ select?: InventorySelect<DefaultArgs> | null | undefined; include?: InventoryInclude<DefaultArgs> | null | undefined; data: (Without<...> & InventoryUncheckedUpdateInput) | (Without<...> & InventoryUpdateInput); where: InventoryWhereUniqueInput; }'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/service/inventory-service.ts[0m:[93m155[0m:[93m21[0m - [91merror[0m[90m TS2322: [0mType '{ warehouse_id: number; item_id: bigint | undefined; }' is not assignable to type 'InventoryWhereUniqueInput'.
+  Type '{ warehouse_id: number; item_id: bigint | undefined; }' is not assignable to type '{ id: number | bigint; } & { id?: number | bigint | undefined; AND?: InventoryWhereInput | InventoryWhereInput[] | undefined; OR?: InventoryWhereInput[] | undefined; ... 7 more ...; item?: (Without<...> & ItemWhereInput) | ... 1 more ... | undefined; }'.
+    Property 'id' is missing in type '{ warehouse_id: number; item_id: bigint | undefined; }' but required in type '{ id: number | bigint; }'.
+
+[7m155[0m                     where: {
+[7m   [0m [91m                    ~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m7635[0m:[93m5[0m
+    [7m7635[0m     where: InventoryWhereUniqueInput
+    [7m    [0m [96m    ~~~~~[0m
+    The expected type comes from property 'where' which is declared here on type '{ select?: InventorySelect<DefaultArgs> | null | undefined; include?: InventoryInclude<DefaultArgs> | null | undefined; data: (Without<...> & InventoryUncheckedUpdateInput) | (Without<...> & InventoryUpdateInput); where: InventoryWhereUniqueInput; }'
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-22 11:05:04.076 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/service/inventory-service.ts[0m:[93m155[0m:[93m21[0m - [91merror[0m[90m TS2322: [0mType '{ warehouse_id: number; item_id: bigint | undefined; }' is not assignable to type 'InventoryWhereUniqueInput'.
+  Type '{ warehouse_id: number; item_id: bigint | undefined; }' is not assignable to type '{ id: number | bigint; } & { id?: number | bigint | undefined; AND?: InventoryWhereInput | InventoryWhereInput[] | undefined; OR?: InventoryWhereInput[] | undefined; ... 7 more ...; item?: (Without<...> & ItemWhereInput) | ... 1 more ... | undefined; }'.
+    Property 'id' is missing in type '{ warehouse_id: number; item_id: bigint | undefined; }' but required in type '{ id: number | bigint; }'.
+
+[7m155[0m                     where: {
+[7m   [0m [91m                    ~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m7635[0m:[93m5[0m
+    [7m7635[0m     where: InventoryWhereUniqueInput
+    [7m    [0m [96m    ~~~~~[0m
+    The expected type comes from property 'where' which is declared here on type '{ select?: InventorySelect<DefaultArgs> | null | undefined; include?: InventoryInclude<DefaultArgs> | null | undefined; data: (Without<...> & InventoryUncheckedUpdateInput) | (Without<...> & InventoryUpdateInput); where: InventoryWhereUniqueInput; }'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/service/inventory-service.ts[0m:[93m155[0m:[93m21[0m - [91merror[0m[90m TS2322: [0mType '{ warehouse_id: number; item_id: bigint | undefined; }' is not assignable to type 'InventoryWhereUniqueInput'.
+  Type '{ warehouse_id: number; item_id: bigint | undefined; }' is not assignable to type '{ id: number | bigint; } & { id?: number | bigint | undefined; AND?: InventoryWhereInput | InventoryWhereInput[] | undefined; OR?: InventoryWhereInput[] | undefined; ... 7 more ...; item?: (Without<...> & ItemWhereInput) | ... 1 more ... | undefined; }'.
+    Property 'id' is missing in type '{ warehouse_id: number; item_id: bigint | undefined; }' but required in type '{ id: number | bigint; }'.
+
+[7m155[0m                     where: {
+[7m   [0m [91m                    ~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m7635[0m:[93m5[0m
+    [7m7635[0m     where: InventoryWhereUniqueInput
+    [7m    [0m [96m    ~~~~~[0m
+    The expected type comes from property 'where' which is declared here on type '{ select?: InventorySelect<DefaultArgs> | null | undefined; include?: InventoryInclude<DefaultArgs> | null | undefined; data: (Without<...> & InventoryUncheckedUpdateInput) | (Without<...> & InventoryUpdateInput); where: InventoryWhereUniqueInput; }'
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-22 11:07:36.504 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/service/inventory-service.ts[0m:[93m159[0m:[93m21[0m - [91merror[0m[90m TS2322: [0mType '{ warehouse_id: number; item_id: bigint; }' is not assignable to type 'InventoryWhereUniqueInput'.
+  Type '{ warehouse_id: number; item_id: bigint; }' is not assignable to type '{ id: number | bigint; } & { id?: number | bigint | undefined; AND?: InventoryWhereInput | InventoryWhereInput[] | undefined; OR?: InventoryWhereInput[] | undefined; ... 7 more ...; item?: (Without<...> & ItemWhereInput) | ... 1 more ... | undefined; }'.
+    Property 'id' is missing in type '{ warehouse_id: number; item_id: bigint; }' but required in type '{ id: number | bigint; }'.
+
+[7m159[0m                     where: {
+[7m   [0m [91m                    ~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m7635[0m:[93m5[0m
+    [7m7635[0m     where: InventoryWhereUniqueInput
+    [7m    [0m [96m    ~~~~~[0m
+    The expected type comes from property 'where' which is declared here on type '{ select?: InventorySelect<DefaultArgs> | null | undefined; include?: InventoryInclude<DefaultArgs> | null | undefined; data: (Without<...> & InventoryUncheckedUpdateInput) | (Without<...> & InventoryUpdateInput); where: InventoryWhereUniqueInput; }'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/service/inventory-service.ts[0m:[93m159[0m:[93m21[0m - [91merror[0m[90m TS2322: [0mType '{ warehouse_id: number; item_id: bigint; }' is not assignable to type 'InventoryWhereUniqueInput'.
+  Type '{ warehouse_id: number; item_id: bigint; }' is not assignable to type '{ id: number | bigint; } & { id?: number | bigint | undefined; AND?: InventoryWhereInput | InventoryWhereInput[] | undefined; OR?: InventoryWhereInput[] | undefined; ... 7 more ...; item?: (Without<...> & ItemWhereInput) | ... 1 more ... | undefined; }'.
+    Property 'id' is missing in type '{ warehouse_id: number; item_id: bigint; }' but required in type '{ id: number | bigint; }'.
+
+[7m159[0m                     where: {
+[7m   [0m [91m                    ~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m7635[0m:[93m5[0m
+    [7m7635[0m     where: InventoryWhereUniqueInput
+    [7m    [0m [96m    ~~~~~[0m
+    The expected type comes from property 'where' which is declared here on type '{ select?: InventorySelect<DefaultArgs> | null | undefined; include?: InventoryInclude<DefaultArgs> | null | undefined; data: (Without<...> & InventoryUncheckedUpdateInput) | (Without<...> & InventoryUpdateInput); where: InventoryWhereUniqueInput; }'
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-22 11:11:07.480 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/service/inventory-service.ts[0m:[93m159[0m:[93m21[0m - [91merror[0m[90m TS2322: [0mType '{ warehouse_id: number; item_id: bigint; }' is not assignable to type 'InventoryWhereUniqueInput'.
+  Type '{ warehouse_id: number; item_id: bigint; }' is not assignable to type '{ id: number | bigint; } & { id?: number | bigint | undefined; AND?: InventoryWhereInput | InventoryWhereInput[] | undefined; OR?: InventoryWhereInput[] | undefined; ... 7 more ...; item?: (Without<...> & ItemWhereInput) | ... 1 more ... | undefined; }'.
+    Property 'id' is missing in type '{ warehouse_id: number; item_id: bigint; }' but required in type '{ id: number | bigint; }'.
+
+[7m159[0m                     where: {
+[7m   [0m [91m                    ~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m7635[0m:[93m5[0m
+    [7m7635[0m     where: InventoryWhereUniqueInput
+    [7m    [0m [96m    ~~~~~[0m
+    The expected type comes from property 'where' which is declared here on type '{ select?: InventorySelect<DefaultArgs> | null | undefined; include?: InventoryInclude<DefaultArgs> | null | undefined; data: (Without<...> & InventoryUncheckedUpdateInput) | (Without<...> & InventoryUpdateInput); where: InventoryWhereUniqueInput; }'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/service/inventory-service.ts[0m:[93m159[0m:[93m21[0m - [91merror[0m[90m TS2322: [0mType '{ warehouse_id: number; item_id: bigint; }' is not assignable to type 'InventoryWhereUniqueInput'.
+  Type '{ warehouse_id: number; item_id: bigint; }' is not assignable to type '{ id: number | bigint; } & { id?: number | bigint | undefined; AND?: InventoryWhereInput | InventoryWhereInput[] | undefined; OR?: InventoryWhereInput[] | undefined; ... 7 more ...; item?: (Without<...> & ItemWhereInput) | ... 1 more ... | undefined; }'.
+    Property 'id' is missing in type '{ warehouse_id: number; item_id: bigint; }' but required in type '{ id: number | bigint; }'.
+
+[7m159[0m                     where: {
+[7m   [0m [91m                    ~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m7635[0m:[93m5[0m
+    [7m7635[0m     where: InventoryWhereUniqueInput
+    [7m    [0m [96m    ~~~~~[0m
+    The expected type comes from property 'where' which is declared here on type '{ select?: InventorySelect<DefaultArgs> | null | undefined; include?: InventoryInclude<DefaultArgs> | null | undefined; data: (Without<...> & InventoryUncheckedUpdateInput) | (Without<...> & InventoryUpdateInput); where: InventoryWhereUniqueInput; }'
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-22 11:14:49.583 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/service/inventory-service.ts[0m:[93m160[0m:[93m25[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'item_id_warehouse_id' does not exist in type 'InventoryWhereUniqueInput'.
+
+[7m160[0m                         item_id_warehouse_id: {
+[7m   [0m [91m                        ~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m7667[0m:[93m5[0m
+    [7m7667[0m     where: InventoryWhereUniqueInput
+    [7m    [0m [96m    ~~~~~[0m
+    The expected type comes from property 'where' which is declared here on type '{ select?: InventorySelect<DefaultArgs> | null | undefined; include?: InventoryInclude<DefaultArgs> | null | undefined; where: InventoryWhereUniqueInput; create: (Without<...> & InventoryUncheckedCreateInput) | (Without<...> & InventoryCreateInput); update: (Without<...> & InventoryUncheckedUpdateInput) | (Without<....'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/service/inventory-service.ts[0m:[93m160[0m:[93m25[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'item_id_warehouse_id' does not exist in type 'InventoryWhereUniqueInput'.
+
+[7m160[0m                         item_id_warehouse_id: {
+[7m   [0m [91m                        ~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m7667[0m:[93m5[0m
+    [7m7667[0m     where: InventoryWhereUniqueInput
+    [7m    [0m [96m    ~~~~~[0m
+    The expected type comes from property 'where' which is declared here on type '{ select?: InventorySelect<DefaultArgs> | null | undefined; include?: InventoryInclude<DefaultArgs> | null | undefined; where: InventoryWhereUniqueInput; create: (Without<...> & InventoryUncheckedCreateInput) | (Without<...> & InventoryCreateInput); update: (Without<...> & InventoryUncheckedUpdateInput) | (Without<....'
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-22 11:21:13.357 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-22 11:21:56.679 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-22 11:22:15.403 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-22 11:22:15.657 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:22:15.701 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:22:15.717 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:22:15.735 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:22:15.739 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:22:15.756 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:22:15.769 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:23:36.225 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-22 11:23:44.614 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-22 11:23:44.687 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:23:44.714 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:23:44.722 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:23:44.735 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:23:44.743 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:23:44.753 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:23:44.779 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:25:27.363 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:25:27.366 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:25:27.376 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:25:27.475 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:25:27.481 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:25:27.484 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:25:27.494 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:25:27.499 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:26:13.374 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:26:13.377 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:26:13.387 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:26:13.394 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:26:13.405 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:26:13.408 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:26:13.418 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:26:13.431 PM info : [object Object]
