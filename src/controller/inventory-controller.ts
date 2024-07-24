@@ -1,7 +1,7 @@
 import { NextFunction, Response } from "express";
 import { AuthenticateRequest } from "../types/authenticatedRequest";
 import { InventoryService } from "../service/inventory-service";
-import { CreateInventoryRequest, TransferInventoryRequest } from "../model/inventory-model";
+import { CreateInventoryRequest, TransactionInventoryRequest, TransferInventoryRequest } from "../model/inventory-model";
 import JSONbig from "json-bigint";
 
 const JSONBigInt = JSONbig({ useNativeBigInt: true });
@@ -48,11 +48,18 @@ export class InventoryController {
         }
     }
 
-    // static async transactionInventory(req: AuthenticateRequest, res: Response, next: NextFunction){
-    //     try {
-    //         const reques
-    //     } catch (error) {
-    //         next(error)
-    //     }
-    // }
+    static async transactionInventory(req: AuthenticateRequest, res: Response, next: NextFunction) {
+        try {
+            const request: TransactionInventoryRequest = req.body as TransactionInventoryRequest;
+            request.id = Number(req.params.id);
+            const response = await InventoryService.transactionInventory(request, req.user);
+
+            res.status(200).json({
+                message: "Transaction succesfull",
+                data: JSONBigInt.parse(JSONBigInt.stringify(response)),
+            });
+        } catch (error) {
+            next(error);
+        }
+    }
 }

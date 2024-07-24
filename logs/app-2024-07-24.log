@@ -1,0 +1,84 @@
+ [LOGGER] 2024-07-24 09:31:47.274 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-24 09:37:52.598 AM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-24 09:37:53.750 AM info : [object Object]
+ [LOGGER] 2024-07-24 09:37:53.897 AM info : [object Object]
+ [LOGGER] 2024-07-24 09:37:53.946 AM info : [object Object]
+ [LOGGER] 2024-07-24 09:37:53.968 AM info : [object Object]
+ [LOGGER] 2024-07-24 09:41:09.003 AM info : [object Object]
+ [LOGGER] 2024-07-24 09:41:09.006 AM info : [object Object]
+ [LOGGER] 2024-07-24 09:41:09.009 AM info : [object Object]
+ [LOGGER] 2024-07-24 09:41:09.010 AM info : [object Object]
+ [LOGGER] 2024-07-24 09:41:09.016 AM info : [object Object]
+ [LOGGER] 2024-07-24 11:11:50.899 AM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-24 11:14:35.556 AM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m44[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'transactionInventory' does not exist on type 'typeof InventoryController'.
+
+[7m44[0m apiRouter.delete("/inventory/:id", InventoryController.transactionInventory);
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m44[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'transactionInventory' does not exist on type 'typeof InventoryController'.
+
+[7m44[0m apiRouter.delete("/inventory/:id", InventoryController.transactionInventory);
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-24 11:56:16.862 AM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m44[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'transactionInventory' does not exist on type 'typeof InventoryController'.
+
+[7m44[0m apiRouter.delete("/inventory/:id", InventoryController.transactionInventory);
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m44[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'transactionInventory' does not exist on type 'typeof InventoryController'.
+
+[7m44[0m apiRouter.delete("/inventory/:id", InventoryController.transactionInventory);
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-24 12:25:55.952 PM error : uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m44[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'transactionInventory' does not exist on type 'typeof InventoryController'.
+
+[7m44[0m apiRouter.delete("/inventory/:id", InventoryController.transactionInventory);
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/api.ts[0m:[93m44[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'transactionInventory' does not exist on type 'typeof InventoryController'.
+
+[7m44[0m apiRouter.delete("/inventory/:id", InventoryController.transactionInventory);
+[7m  [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\laragon\www\inventory-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+ [LOGGER] 2024-07-24 12:27:20.095 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-24 12:28:05.292 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-24 12:40:33.759 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-24 12:40:33.951 PM info : [object Object]
+ [LOGGER] 2024-07-24 12:40:33.960 PM info : [object Object]
+ [LOGGER] 2024-07-24 12:40:33.967 PM info : [object Object]

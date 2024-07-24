@@ -12,6 +12,12 @@ export type TransferInventoryRequest = {
     description: string;
 };
 
+export type TransactionInventoryRequest = {
+    id: number;
+    quantity: number;
+    description: string;
+};
+
 export type GetAllInventoryResponse = {
     id: bigint;
     quantity: number;

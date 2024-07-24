@@ -14,4 +14,10 @@ export class InventoryValidation {
         quantity: z.number(),
         description: z.string().min(1).max(255),
     });
+
+    static readonly TRANSACTION_INVENTORY = z.object({
+        id: z.number(),
+        quantity: z.number(),
+        description: z.string().min(1).max(255),
+    });
 }

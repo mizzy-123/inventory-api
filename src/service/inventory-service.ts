@@ -4,7 +4,7 @@ import { prismaClient } from "../application/database";
 import { Validation } from "../validation/validation";
 import { InventoryValidation } from "../validation/inventory-validation";
 import { UserResponse } from "../model/user-model";
-import { CreateInventoryRequest, GetAllInventoryResponse, TransferInventoryRequest } from "../model/inventory-model";
+import { CreateInventoryRequest, GetAllInventoryResponse, TransactionInventoryRequest, TransferInventoryRequest } from "../model/inventory-model";
 
 export class InventoryService {
     static async createInventory(request: CreateInventoryRequest, user: UserResponse | undefined): Promise<Inventory> {
@@ -246,5 +246,83 @@ export class InventoryService {
         }
 
         return inventoryResponse;
+    }
+
+    static async transactionInventory(request: TransactionInventoryRequest, user: UserResponse | undefined): Promise<Inventory> {
+        if (!user) {
+            throw new ResponseError(401, `You are not authenticated`);
+        }
+
+        const requestTransaction = Validation.validate(InventoryValidation.TRANSACTION_INVENTORY, request);
+
+        const findInventory = await prismaClient.inventory.findUnique({
+            where: {
+                id: requestTransaction.id,
+            },
+            include: {
+                item: true,
+                warehouse: true,
+            },
+        });
+
+        if (!findInventory) {
+            throw new ResponseError(500, "Cannot find inventory");
+        }
+
+        let resultResponse: Inventory | null = null;
+
+        try {
+            await prismaClient.$transaction(async (prisma) => {
+                const resultItem = await prisma.item.update({
+                    where: {
+                        id: findInventory.item.id,
+                    },
+                    data: {
+                        quantity: {
+                            decrement: requestTransaction.quantity,
+                        },
+                    },
+                });
+
+                if (resultItem.quantity < 0) {
+                    throw new Error("Insufficient stock");
+                }
+
+                const resultInventory = await prisma.inventory.update({
+                    where: {
+                        id: requestTransaction.id,
+                    },
+                    data: {
+                        quantity: {
+                            decrement: requestTransaction.quantity,
+                        },
+                    },
+                });
+
+                if (resultInventory.quantity < 0) {
+                    throw new Error(`Insufficient stock on warehouse ${findInventory.warehouse.name}`);
+                }
+
+                await prisma.outbound.create({
+                    data: {
+                        item_id: resultInventory.item_id,
+                        users_id: user.id,
+                        warehouse_id: resultInventory.warehouse_id,
+                        description: requestTransaction.description,
+                        quantity: requestTransaction.quantity,
+                    },
+                });
+
+                resultResponse = resultInventory;
+            });
+        } catch (error) {
+            throw new ResponseError(500, `Failed to transaction inventory ${String((error as Error).message)}`);
+        }
+
+        if (!resultResponse) {
+            throw new ResponseError(500, `Failed to transaction inventory`);
+        }
+
+        return resultResponse;
     }
 }

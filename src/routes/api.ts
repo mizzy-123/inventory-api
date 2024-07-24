@@ -41,6 +41,7 @@ apiRouter.delete("/item/:id", adminAndManagerMiddleware, ItemController.deleteIt
 apiRouter.post("/inventory", InventoryController.createInventory);
 apiRouter.put("/inventory/:id/transfer", InventoryController.transferInventory);
 apiRouter.get("/inventory", InventoryController.getAllInventory);
+apiRouter.post("/inventory/:id/transaction", InventoryController.transactionInventory);
 // apiRouter.post("/inventory/:id", )
 // apiRouter.delete("/inventory/:id/item", adminAndManagerMiddleware);
 
