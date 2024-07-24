@@ -4,7 +4,7 @@ import { prismaClient } from "../application/database";
 import { Validation } from "../validation/validation";
 import { InventoryValidation } from "../validation/inventory-validation";
 import { UserResponse } from "../model/user-model";
-import { CreateInventoryRequest, TransferInventoryRequest } from "../model/inventory-model";
+import { CreateInventoryRequest, GetAllInventoryResponse, TransferInventoryRequest } from "../model/inventory-model";
 
 export class InventoryService {
     static async createInventory(request: CreateInventoryRequest, user: UserResponse | undefined): Promise<Inventory> {
@@ -117,6 +117,45 @@ export class InventoryService {
         }
 
         return resultResponse;
+    }
+
+    static async getAllInventory(): Promise<GetAllInventoryResponse[]> {
+        const getDataInventory = await prismaClient.inventory.findMany({
+            include: {
+                item: true,
+                warehouse: true,
+            },
+            orderBy: {
+                id: "desc",
+            },
+        });
+
+        const resultDataInventory: GetAllInventoryResponse[] = getDataInventory.map((v) => ({
+            id: v.id,
+            quantity: v.quantity,
+            created_at: v.created_at,
+            updated_at: v.updated_at,
+            warehouse_id: v.warehouse_id,
+            item_id: v.item_id,
+            item: {
+                id: v.item.id,
+                name: v.item.name,
+                code: v.item.code,
+                quantity: v.item.quantity,
+                created_at: v.item.created_at,
+                updated_at: v.item.updated_at,
+                supplier_id: v.item.supplier_id,
+            },
+            warehouse: {
+                id: v.warehouse.id,
+                name: v.warehouse.name,
+                location: v.warehouse.location,
+                created_at: v.warehouse.created_at,
+                updated_at: v.warehouse.updated_at,
+            },
+        }));
+
+        return resultDataInventory;
     }
 
     static async transferInventory(request: TransferInventoryRequest, user: UserResponse | undefined): Promise<Inventory> {

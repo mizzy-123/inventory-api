@@ -1,4 +1,5 @@
 import { Role, User, UserData } from "@prisma/client";
+import "dotenv/config";
 
 export type CreateUserRequest = {
     email: string;
@@ -77,7 +78,7 @@ export function toGetUserWithUserDataResponse(user: User, userData: UserData): G
         created_at: user.created_at,
         updated_at: user.updated_at,
         user_data: {
-            foto: userData.foto,
+            foto: `${process.env.IMAGE_URL}${userData.foto}`,
         },
     };
 }

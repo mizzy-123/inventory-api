@@ -8,6 +8,8 @@ import { WarehouseController } from "../controller/warehouse-controller";
 import { adminAndManagerMiddleware } from "../middleware/admin-and-manager-middeware";
 import { InventoryController } from "../controller/inventory-controller";
 import { ItemController } from "../controller/item-controller";
+import { InboundController } from "../controller/inbound-controller";
+import { OutboundController } from "../controller/outbound-controller";
 
 export const apiRouter = Router();
 
@@ -38,5 +40,12 @@ apiRouter.delete("/item/:id", adminAndManagerMiddleware, ItemController.deleteIt
 // Inventory
 apiRouter.post("/inventory", InventoryController.createInventory);
 apiRouter.put("/inventory/:id/transfer", InventoryController.transferInventory);
+apiRouter.get("/inventory", InventoryController.getAllInventory);
+// apiRouter.post("/inventory/:id", )
 // apiRouter.delete("/inventory/:id/item", adminAndManagerMiddleware);
-// apiRouter.get("/inventory");
+
+// inbound
+apiRouter.get("/inbound", InboundController.getAllInbound);
+
+// outbound
+apiRouter.get("/outbound", OutboundController.getAllOutbound);

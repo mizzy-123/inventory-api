@@ -249,3 +249,4 @@ TSError: ⨯ Unable to compile TypeScript:
  [LOGGER] 2024-07-22 11:26:13.408 PM info : [object Object]
  [LOGGER] 2024-07-22 11:26:13.418 PM info : [object Object]
  [LOGGER] 2024-07-22 11:26:13.431 PM info : [object Object]
+ [LOGGER] 2024-07-22 11:28:31.607 PM info : Listening on http://localhost:4000

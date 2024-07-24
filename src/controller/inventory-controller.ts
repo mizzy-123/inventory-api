@@ -27,7 +27,7 @@ export class InventoryController {
             request.id = Number(req.params.id);
             const response = await InventoryService.transferInventory(request, req.user);
 
-            res.status(201).json({
+            res.status(200).json({
                 message: "Update inventory succesfull",
                 data: JSONBigInt.parse(JSONBigInt.stringify(response)),
             });
@@ -35,4 +35,24 @@ export class InventoryController {
             next(error);
         }
     }
+
+    static async getAllInventory(req: AuthenticateRequest, res: Response, next: NextFunction) {
+        try {
+            const response = await InventoryService.getAllInventory();
+            res.status(200).json({
+                message: "Get all data inventory successfull",
+                data: JSONBigInt.parse(JSONBigInt.stringify(response)),
+            });
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    // static async transactionInventory(req: AuthenticateRequest, res: Response, next: NextFunction){
+    //     try {
+    //         const reques
+    //     } catch (error) {
+    //         next(error)
+    //     }
+    // }
 }
