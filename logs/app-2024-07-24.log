@@ -82,3 +82,13 @@ TSError: ⨯ Unable to compile TypeScript:
  [LOGGER] 2024-07-24 12:40:33.951 PM info : [object Object]
  [LOGGER] 2024-07-24 12:40:33.960 PM info : [object Object]
  [LOGGER] 2024-07-24 12:40:33.967 PM info : [object Object]
+ [LOGGER] 2024-07-24 12:45:52.862 PM info : Listening on http://localhost:4000
+ [LOGGER] 2024-07-24 12:46:42.375 PM info : Starting a postgresql pool with 5 connections.
+ [LOGGER] 2024-07-24 12:46:42.560 PM info : [object Object]
+ [LOGGER] 2024-07-24 12:46:42.571 PM info : [object Object]
+ [LOGGER] 2024-07-24 12:46:42.577 PM info : [object Object]
+ [LOGGER] 2024-07-24 12:46:42.637 PM info : [object Object]
+ [LOGGER] 2024-07-24 12:46:42.782 PM info : [object Object]
+ [LOGGER] 2024-07-24 12:46:42.793 PM info : [object Object]
+ [LOGGER] 2024-07-24 12:46:42.870 PM info : [object Object]
+ [LOGGER] 2024-07-24 12:46:42.883 PM info : [object Object]

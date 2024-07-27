@@ -15,7 +15,7 @@ import {
 } from "../model/user-model";
 import { Validation } from "../validation/validation";
 import { UserValidation } from "../validation/user-validation";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import { prismaClient } from "../application/database";
 import { ResponseError } from "../error/response-error";
 import { generateAccessToken, generateRefreshToken } from "../utils/jwt";
